@@ -111,9 +111,20 @@
     "mab.map": "Map",
     "visit.title": "Find ASADO Express.",
     "visit.from": "From", "visit.to": "To", "visit.you": "You",
-    "footer.kosher": "Kosher Mehadrin",
+    "footer.kosher": "Strictly Kosher · Mehadrin",
+    "footer.kosher.sub": "Family-run since 2024",
     "footer.copy": "© ASADO Nice to Meat · Paphos & Limassol",
-    "footer.tagline": "Where taste meets pleasure."
+    "footer.tagline": "Where taste meets pleasure.",
+    "footer.mantra.l1": "Argentinian fire.",
+    "footer.mantra.l2": "Mediterranean soul.",
+    "footer.mantra.l3": "Strictly kosher.",
+    "footer.branch.paphos.eyebrow": "The new branch",
+    "footer.branch.paphos.hours": "Sun – Thu 11:00 – 22:00 · Fri 11:00 – 15:00 · Sat closed",
+    "footer.branch.limassol.eyebrow": "The original",
+    "footer.branch.limassol.hours": "Sun – Thu 11:00 – 22:30 · Fri 11:00 – 15:00 · Sat closed",
+    "footer.action.directions": "Directions",
+    "footer.action.site": "asadonicetomeat.com",
+    "footer.nav.gallery": "Gallery"
   },
 
   "he": {
@@ -228,9 +239,20 @@
     "mab.map": "מפה",
     "visit.title": "איפה אנחנו.",
     "visit.from": "מאת", "visit.to": "אל", "visit.you": "אתם",
-    "footer.kosher": "כשרות מהודרת",
+    "footer.kosher": "בכשרות מהודרת",
+    "footer.kosher.sub": "ניהול משפחתי מאז 2024",
     "footer.copy": "© ASADO Nice to Meat · פאפוס ולימסול",
-    "footer.tagline": "כשהטעם פוגש את התשוקה."
+    "footer.tagline": "כשהטעם פוגש את התשוקה.",
+    "footer.mantra.l1": "אש ארגנטינית.",
+    "footer.mantra.l2": "נשמה ים תיכונית.",
+    "footer.mantra.l3": "בכשרות מהודרת.",
+    "footer.branch.paphos.eyebrow": "הסניף החדש",
+    "footer.branch.paphos.hours": "ראשון – חמישי 11:00 – 22:00 · שישי 11:00 – 15:00 · שבת סגור",
+    "footer.branch.limassol.eyebrow": "הסניף המקורי",
+    "footer.branch.limassol.hours": "ראשון – חמישי 11:00 – 22:30 · שישי 11:00 – 15:00 · שבת סגור",
+    "footer.action.directions": "ניווט",
+    "footer.action.site": "asadonicetomeat.com",
+    "footer.nav.gallery": "גלריה"
   },
 
   "ar": {
@@ -334,9 +356,20 @@
     "mab.map": "الخريطة",
     "visit.title": "أين تجدنا.",
     "visit.from": "من", "visit.to": "إلى", "visit.you": "أنت",
-    "footer.kosher": "كوشير معتمد",
+    "footer.kosher": "كوشير صارم · مهدرين",
+    "footer.kosher.sub": "إدارة عائلية منذ 2024",
     "footer.copy": "© ASADO Nice to Meat · بافوس وليماسول",
-    "footer.tagline": "حيث يلتقي الذوق بالمتعة."
+    "footer.tagline": "حيث يلتقي الذوق بالمتعة.",
+    "footer.mantra.l1": "نار أرجنتينية.",
+    "footer.mantra.l2": "روح متوسطية.",
+    "footer.mantra.l3": "كوشير صارم.",
+    "footer.branch.paphos.eyebrow": "الفرع الجديد",
+    "footer.branch.paphos.hours": "الأحد – الخميس 11:00 – 22:00 · الجمعة 11:00 – 15:00 · السبت مغلق",
+    "footer.branch.limassol.eyebrow": "الفرع الأصلي",
+    "footer.branch.limassol.hours": "الأحد – الخميس 11:00 – 22:30 · الجمعة 11:00 – 15:00 · السبت مغلق",
+    "footer.action.directions": "الاتجاهات",
+    "footer.action.site": "asadonicetomeat.com",
+    "footer.nav.gallery": "المعرض"
   },
 
   "el": {
