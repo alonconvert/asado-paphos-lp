@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title data-i18n="meta.title">ASADO Express Paphos · Kosher Argentinian-Mediterranean</title>
+  <meta name="description" data-i18n="meta.description" content="Kosher Argentinian-Mediterranean kitchen in Paphos. Slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. Alkminis 29, Paphos." />
+  <meta name="theme-color" content="#0E4D40" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Serif+Hebrew:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="ASADO Express · Paphos" />
+  <meta property="og:description" content="Kosher Argentinian-Mediterranean kitchen in Paphos. Asado, kebabs, hummus bowls, pita wraps." />
+  <meta property="og:image" content="assets/images/hero-hummus-asado.png" />
+  <meta property="og:type" content="restaurant.restaurant" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#top" class="brand" aria-label="ASADO Express Paphos">
+        <svg class="brand-cow" viewBox="0 0 64 32" aria-hidden="true">
+          <path d="M8 22 Q4 18 6 14 Q4 12 8 10 Q12 6 18 8 Q22 4 28 6 L36 6 Q42 4 46 8 Q52 6 56 10 Q60 12 58 14 Q60 18 56 22 L52 26 L46 24 L44 28 L40 26 L36 28 L32 26 L28 28 L24 26 L20 28 L18 24 L12 26 Z M22 14 a1.5 1.5 0 1 0 0.01 0 Z M42 14 a1.5 1.5 0 1 0 0.01 0 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </svg>
+        <span class="brand-name">
+          <span class="brand-asado">ASADO</span>
+          <span class="brand-tag">Nice to Meat · <em>express</em></span>
+        </span>
+      </a>
+
+      <div class="lang-switch" data-lang-switch>
+        <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="lang-current">EN</span>
+          <svg viewBox="0 0 12 8" width="10" height="6" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <ul class="lang-menu" role="listbox" id="lang-menu">
+          <li role="option" data-lang="en"><span class="lang-code">EN</span><span class="lang-name">English</span></li>
+          <li role="option" data-lang="he"><span class="lang-code">עב</span><span class="lang-name">עברית</span></li>
+          <li role="option" data-lang="ar"><span class="lang-code">ع</span><span class="lang-name">العربية</span></li>
+          <li role="option" data-lang="el"><span class="lang-code">ΕΛ</span><span class="lang-name">Ελληνικά</span></li>
+          <li role="option" data-lang="ru"><span class="lang-code">RU</span><span class="lang-name">Русский</span></li>
+          <li role="option" data-lang="fr"><span class="lang-code">FR</span><span class="lang-name">Français</span></li>
+          <li role="option" data-lang="it"><span class="lang-code">IT</span><span class="lang-name">Italiano</span></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo">
+        <picture>
+          <source srcset="assets/images/hero-hummus-asado.webp" type="image/webp" />
+          <img src="assets/images/hero-hummus-asado.png" alt="" loading="eager" fetchpriority="high" />
+        </picture>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="kosher-badge" aria-label="Kosher certified">
+          <span lang="he" dir="rtl">כשר</span>
+          <span data-i18n="hero.kosher">Kosher</span>
+        </div>
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-title-main" data-i18n="hero.title">Where Taste Meets Pleasure</span>
+          <span class="hero-title-sub" data-i18n="hero.subtitle">Now open in Paphos</span>
+        </h1>
+        <p class="hero-tagline" data-i18n="hero.tagline">Authentic kosher Argentinian cuisine with a Mediterranean touch — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps.</p>
+        <div class="hero-ctas">
+          <a class="cta cta-primary" href="tel:+35797660007" data-i18n="cta.call">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4a2 2 0 0 1 2-2h2.5a1 1 0 0 1 .97.76l1.06 4.24a1 1 0 0 1-.27.95l-1.7 1.7a14 14 0 0 0 6.07 6.07l1.7-1.7a1 1 0 0 1 .95-.27l4.24 1.06a1 1 0 0 1 .76.97V18a2 2 0 0 1-2 2h-1C9.61 20 4 14.39 4 7V6a2 2 0 0 1 1-1.7Z" fill="currentColor"/></svg>
+            <span>Call</span>
+          </a>
+          <a class="cta cta-whatsapp" href="https://wa.me/35797660007" data-i18n="cta.whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm5.4 14.4c-.2.6-1.3 1.2-1.8 1.3-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .5-.1.2-.2.3-.4.5-.1.2-.3.3-.4.5s-.3.4-.1.7c.2.4.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.6.3.1.5.1.7-.1.2-.2.8-.9.9-1.2.1-.3.3-.2.5-.1.2.1 1.4.7 1.6.8.3.1.4.2.5.3.1.2.1.7-.1 1.4Z" fill="currentColor"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a class="cta cta-ghost" href="#visit" data-i18n="cta.directions">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
+            <span>Directions</span>
+          </a>
+        </div>
+      </div>
+      <a href="#story" class="hero-scroll" aria-label="Scroll for more">
+        <svg viewBox="0 0 24 32" width="20" height="28" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="1.6" fill="currentColor"><animate attributeName="cy" from="9" to="15" dur="1.4s" repeatCount="indefinite" /></circle></svg>
+      </a>
+    </section>
+
+    <!-- ============== STORY ============== -->
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="eyebrow" data-i18n="story.eyebrow">Our story</p>
+          <h2 id="story-title" data-i18n="story.title">From Limassol's Old Port to Paphos.</h2>
+          <p data-i18n="story.body1">After years of grilling some of Cyprus's most loved kosher Argentinian food on the Limassol harbour, we've crossed the island. ASADO Express brings the same slow-cooked beef, hand-rolled kebabs, and fresh-pressed hummus — now in the heart of Paphos.</p>
+          <p data-i18n="story.body2">Every dish is a masterpiece; every sizzle is a harmony of cultural fusion. Argentinian fire meets Mediterranean soul, all kept strictly kosher.</p>
+        </div>
+        <figure class="story-photo">
+          <picture class="story-photo-frame">
+            <source srcset="assets/images/storefront.webp" type="image/webp" />
+            <img src="assets/images/storefront.jpg" alt="ASADO Express storefront on Alkminis 29, Paphos" loading="lazy" />
+          </picture>
+          <figcaption data-i18n="story.caption">Alkminis 29 · Paphos</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== BOWLS ============== -->
+    <section class="menu menu-bowls" id="bowls" aria-labelledby="bowls-title">
+      <header class="menu-header">
+        <p class="eyebrow" data-i18n="bowls.eyebrow">The signature</p>
+        <h2 id="bowls-title" data-i18n="bowls.title">Bowls</h2>
+        <p class="menu-sub" data-i18n="bowls.sub">Hearty, layered, ready in minutes. Each one a meal on its own.</p>
+      </header>
+      <div class="dish-grid">
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/asado-bowl.webp" type="image/webp" /><img src="assets/images/asado-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.asado.name">Asado</h3>
+            <span class="dish-price">€17</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.asado.desc">Slow-cooked Argentinian short rib over rice with chimichurri.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/boneless-chicken-bowl.webp" type="image/webp" /><img src="assets/images/boneless-chicken-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.boneless.name">Boneless Chicken</h3>
+            <span class="dish-price">€16</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.boneless.desc">Grilled chicken thigh, saffron rice, Mediterranean salad, tahini.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/kebab-bowl.webp" type="image/webp" /><img src="assets/images/kebab-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.kebab.name">Kebab</h3>
+            <span class="dish-price">€17</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.kebab.desc">Hand-rolled lamb-and-beef kebabs, grilled vegetables, harissa.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/jerusalem-mix-bowl.webp" type="image/webp" /><img src="assets/images/jerusalem-mix-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.jerusalem.name">Jerusalem Mix</h3>
+            <span class="dish-price">€17</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.jerusalem.desc">Classic me'urav: chicken hearts, livers, onion, cumin, sumac.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/ribeye-entrecote-bowl.webp" type="image/webp" /><img src="assets/images/ribeye-entrecote-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.ribeye.name">Ribeye Entrecôte</h3>
+            <span class="dish-price">€20</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.ribeye.desc">Premium grilled entrecôte over arugula, balsamic, sea salt.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/hummus-asado-bowl.webp" type="image/webp" /><img src="assets/images/hummus-asado-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.hum-asado.name">Hummus &amp; Asado</h3>
+            <span class="dish-price">€16</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.hum-asado.desc">Creamy hummus crowned with slow-cooked asado and pickled chili.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/hummus-kebab-bowl.webp" type="image/webp" /><img src="assets/images/hummus-kebab-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.hum-kebab.name">Hummus &amp; Kebab</h3>
+            <span class="dish-price">€14</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.hum-kebab.desc">Hummus topped with two grilled kebabs, sumac and red onion.</p>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-photo"><picture><source srcset="assets/images/chicken-schnitzel-bowl.webp" type="image/webp" /><img src="assets/images/chicken-schnitzel-bowl.png" alt="" loading="lazy" /></picture></div>
+          <div class="dish-meta">
+            <h3 data-i18n="dish.schnitzel.name">Chicken Schnitzel</h3>
+            <span class="dish-price">€16</span>
+          </div>
+          <p class="dish-desc" data-i18n="dish.schnitzel.desc">Crispy breaded chicken cutlets, Israeli salad, lemon, tahini.</p>
+        </article>
+      </div>
+
+      <p class="menu-footnote" data-i18n="bowls.more">Also on the bowl menu: Chicken Leg · Hummus &amp; Pulled Chicken · Hummus &amp; Jerusalem Mix · Hummus &amp; Ribeye Entrecôte · Hummus &amp; Sabich · Hummus &amp; Boneless Chicken · Plain Hummus.</p>
+    </section>
+
+    <!-- ============== PITAS ============== -->
+    <section class="menu menu-pitas" id="pitas" aria-labelledby="pitas-title">
+      <header class="menu-header">
+        <p class="eyebrow" data-i18n="pitas.eyebrow">Wrapped to go</p>
+        <h2 id="pitas-title" data-i18n="pitas.title">Pitas</h2>
+        <p class="menu-sub" data-i18n="pitas.sub">Cypriot pita, hot off the grill, paper-wrapped for the walk down to the harbour.</p>
+      </header>
+      <div class="pita-grid">
+        <article class="pita-card" data-reveal>
+          <div class="pita-photo"><picture><source srcset="assets/images/pita-pulled-chicken.webp" type="image/webp" /><img src="assets/images/pita-pulled-chicken.png" alt="" loading="lazy" /></picture></div>
+          <div class="pita-meta">
+            <h3 data-i18n="pita.pulled.name">Pulled Chicken</h3>
+            <span class="dish-price">€14</span>
+          </div>
+          <p class="dish-desc" data-i18n="pita.pulled.desc">Slow-pulled chicken, cabbage, tahini, harissa.</p>
+        </article>
+
+        <article class="pita-card" data-reveal>
+          <div class="pita-photo"><picture><source srcset="assets/images/pita-asado.webp" type="image/webp" /><img src="assets/images/pita-asado.png" alt="" loading="lazy" /></picture></div>
+          <div class="pita-meta">
+            <h3 data-i18n="pita.asado.name">Asado</h3>
+            <span class="dish-price">€15</span>
+          </div>
+          <p class="dish-desc" data-i18n="pita.asado.desc">Slow-cooked beef short rib, chimichurri, pickled cabbage.</p>
+        </article>
+
+        <article class="pita-card" data-reveal>
+          <div class="pita-photo"><picture><source srcset="assets/images/pita-kebab.webp" type="image/webp" /><img src="assets/images/pita-kebab.png" alt="" loading="lazy" /></picture></div>
+          <div class="pita-meta">
+            <h3 data-i18n="pita.kebab.name">Kebab</h3>
+            <span class="dish-price">€15</span>
+          </div>
+          <p class="dish-desc" data-i18n="pita.kebab.desc">Hand-rolled kebabs, grilled vegetables, tahini, sumac.</p>
+        </article>
+      </div>
+
+      <p class="menu-footnote" data-i18n="pitas.more">Also: Boneless Chicken · Chicken Schnitzel · Jerusalem Mix · Ribeye Entrecôte pitas.</p>
+    </section>
+
+    <!-- ============== SIDES & DRINKS ============== -->
+    <section class="menu menu-sides" id="sides" aria-labelledby="sides-title">
+      <div class="sides-grid">
+        <div>
+          <header class="menu-header menu-header-tight">
+            <p class="eyebrow" data-i18n="sides.eyebrow">On the side</p>
+            <h2 id="sides-title" data-i18n="sides.title">Sides &amp; Bites</h2>
+          </header>
+          <ul class="side-list">
+            <li><span data-i18n="sides.eggplant">Roasted eggplant with tahini</span><span class="dish-price">€6</span></li>
+            <li><span data-i18n="sides.burger">Hamburger &amp; fries</span><span class="dish-price">€18</span></li>
+            <li><span data-i18n="sides.loaded">Loaded fries with asado</span><span class="dish-price">€13</span></li>
+            <li><span data-i18n="sides.cigar">Fried asado cigar</span><span class="dish-price">€6</span></li>
+            <li><span data-i18n="sides.popcorn">Chicken popcorn (small / big)</span><span class="dish-price">€9 / €16</span></li>
+            <li><span data-i18n="sides.fries">Homemade French fries (small / big)</span><span class="dish-price">€4 / €7</span></li>
+            <li><span data-i18n="sides.rice">White rice</span><span class="dish-price">€5</span></li>
+            <li><span data-i18n="sides.pita">Extra pita</span><span class="dish-price">€1.50</span></li>
+          </ul>
+        </div>
+        <div>
+          <header class="menu-header menu-header-tight">
+            <p class="eyebrow" data-i18n="drinks.eyebrow">To wash it down</p>
+            <h2 data-i18n="drinks.title">Drinks</h2>
+          </header>
+          <ul class="drink-list">
+            <li data-i18n="drinks.water">Water</li>
+            <li data-i18n="drinks.soda">Soda</li>
+            <li data-i18n="drinks.coke">Coca-Cola / Coke Zero</li>
+            <li data-i18n="drinks.fanta">Fanta</li>
+            <li data-i18n="drinks.sprite">Sprite / Sprite Zero</li>
+            <li data-i18n="drinks.icetea">Iced tea peach</li>
+            <li data-i18n="drinks.juice">Orange / apple juice</li>
+            <li data-i18n="drinks.beer">Corona · Stella beer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== VISIT ============== -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit-grid">
+        <div class="visit-info">
+          <p class="eyebrow" data-i18n="visit.eyebrow">Visit us</p>
+          <h2 id="visit-title" data-i18n="visit.title">Find ASADO Express</h2>
+          <address class="visit-address">
+            <strong data-i18n="visit.addressLabel">Address</strong>
+            <span>Alkminis 29, 8041 Paphos, Cyprus</span>
+          </address>
+          <div class="visit-phone">
+            <strong data-i18n="visit.phoneLabel">Phone</strong>
+            <a href="tel:+35797660007">+357 97 660007</a>
+          </div>
+          <div class="visit-cta-row">
+            <a class="cta cta-primary" href="tel:+35797660007" data-i18n="cta.call">Call</a>
+            <a class="cta cta-whatsapp" href="https://wa.me/35797660007" data-i18n="cta.whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="cta cta-ghost" href="https://maps.google.com/?q=Alkminis+29,+8041+Paphos,+Cyprus" target="_blank" rel="noopener" data-i18n="cta.directions">Directions</a>
+          </div>
+        </div>
+        <div class="visit-map">
+          <iframe
+            title="Map to ASADO Express, Alkminis 29, Paphos"
+            src="https://maps.google.com/maps?q=Alkminis%2029%2C%208041%20Paphos%2C%20Cyprus&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-asado">ASADO</span>
+        <span class="brand-tag">Nice to Meat · <em>express</em></span>
+      </div>
+      <div class="footer-meta">
+        <span class="footer-kosher" lang="he" dir="rtl">כשר</span>
+        <span data-i18n="footer.kosher">Kosher certified</span>
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">© ASADO Nice to Meat · Paphos &amp; Limassol</p>
+    </div>
+  </footer>
+
+  <script src="i18n.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="animations.js" defer></script>
+
+</body>
+</html>

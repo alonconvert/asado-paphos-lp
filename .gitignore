@@ -1,0 +1,8 @@
+.DS_Store
+.vercel
+node_modules/
+*.log
+.playwright-mcp/
+
+# Generated dish images (PNG + WebP) ARE committed so the site works without
+# regenerating. Run scripts/generate-images.js if you want fresh photography.
