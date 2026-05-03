@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASADO Express · Social banners</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#073329" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #073329;
+      --teal-deep: #0c2f2c;
+      --cream: #F5EFE3;
+      --cream-deep: #ECE4D2;
+      --terracotta: #C46A3B;
+      --ink: #1A1A1A;
+      --bone: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      padding: 3rem 1.5rem 6rem;
+    }
+    header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(2.4rem, 1.6rem + 3vw, 4rem);
+      font-variation-settings: "opsz" 144, "SOFT" 60;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--teal);
+      margin: 0 0 0.7rem;
+    }
+    header p {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(7, 51, 41, 0.72);
+      margin: 0;
+    }
+    .grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.4rem;
+    }
+    .banner {
+      background: var(--bone);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 4px 14px rgba(7, 51, 41, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      transition: transform 240ms cubic-bezier(.2,.8,.2,1), box-shadow 240ms ease;
+    }
+    .banner:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(7, 51, 41, 0.14);
+    }
+    .banner-img {
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--cream-deep);
+      position: relative;
+    }
+    .banner-img.portrait { aspect-ratio: 2 / 3; }
+    .banner-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .banner-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .banner-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--teal);
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .banner-size {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-size: 0.78rem;
+      color: rgba(7, 51, 41, 0.55);
+    }
+    .download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.7rem;
+      background: var(--terracotta);
+      color: var(--bone);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      transition: background 200ms ease, transform 200ms ease;
+    }
+    .download:hover {
+      background: #A4552B;
+      transform: translateY(-1px);
+    }
+    .download svg { width: 14px; height: 14px; }
+    .meta-bar {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      padding: 1.2rem 1.5rem;
+      background: var(--bone);
+      border-radius: 12px;
+      font-size: 0.86rem;
+      color: rgba(7, 51, 41, 0.72);
+      line-height: 1.55;
+      box-shadow: 0 4px 14px rgba(7, 51, 41, 0.06);
+    }
+    .meta-bar code {
+      background: var(--cream-deep);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+    a { color: var(--terracotta); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Social banners</h1>
+    <p>Generated via gpt-image-2 · ready for Facebook & Instagram</p>
+  </header>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="meta-bar">
+    Right-click any banner image and "Save image as…" to grab the full-resolution PNG, or hit the orange Download button. Tap a tile to open the full-size in a new window.<br/>
+    All assets sit at <code>/assets/social/</code> on the deployed site — direct links work in WhatsApp / Slack / email.
+  </div>
+
+  <script>
+    const banners = [
+      { slug: '01-hero-mantra-square',     name: 'Hero · Mantra',          size: '1024×1024' },
+      { slug: '02-opening-now-square',     name: 'Opening Day',            size: '1024×1024' },
+      { slug: '03-bowls-grid-square',      name: '8 Bowls Grid',           size: '1024×1024' },
+      { slug: '04-pita-fire-portrait',    name: 'Pita Off The Fire',      size: '1024×1536', portrait: true },
+      { slug: '05-schnitzel-square',       name: 'Schnitzel · Golden Hour', size: '1024×1024' },
+      { slug: '06-burger-mood-square',     name: 'Pulled-Beef Burger',     size: '1024×1024' },
+      { slug: '07-family-run-square',      name: 'Family-Run · Kitchen',   size: '1024×1024' },
+      { slug: '08-two-harbours-square',    name: 'Two Harbours · Map',     size: '1024×1024' },
+      { slug: '09-hebrew-kosher-square',   name: 'Hebrew · בכשרות',         size: '1024×1024' },
+      { slug: '10-whatsapp-order-square',  name: 'Order on WhatsApp',      size: '1024×1024' },
+    ];
+    const grid = document.getElementById('grid');
+    banners.forEach(b => {
+      const el = document.createElement('article');
+      el.className = 'banner';
+      el.innerHTML = `
+        <a class="banner-img${b.portrait ? ' portrait' : ''}" href="assets/social/${b.slug}.png" target="_blank" rel="noopener">
+          <img src="assets/social/${b.slug}.png" alt="${b.name}" loading="lazy" />
+        </a>
+        <div class="banner-meta">
+          <span class="banner-name">${b.name}</span>
+          <span class="banner-size">${b.size}</span>
+        </div>
+        <a class="download" href="assets/social/${b.slug}.png" download>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          Download
+        </a>`;
+      grid.appendChild(el);
+    });
+  </script>
+</body>
+</html>
