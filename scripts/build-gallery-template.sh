@@ -18,6 +18,7 @@ IMAGE_DIRS=(
   "assets/gallery-frames"
   "assets/maps-photos"
   "assets/images/real"
+  "assets/whatsapp-imports"
   "assets/video"   # paphos-* stills, kitchen posters etc.
 )
 
