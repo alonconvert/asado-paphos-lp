@@ -550,12 +550,12 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
 }
 .mosaic-stage {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: clamp(0.5rem, 0.9vw, 0.95rem);
-  height: clamp(720px, 90vh, 1020px);
-  width: 140%;
-  margin-left: -20%;
-  transform: rotate(-12deg);
+  grid-template-columns: repeat(9, 1fr);
+  gap: clamp(0.4rem, 0.6vw, 0.7rem);
+  height: clamp(720px, 92vh, 1080px);
+  width: 145%;
+  margin-left: -22.5%;
+  transform: rotate(-10deg);
   transform-origin: 50% 50%;
   /* Stronger feather: radial fade + vertical fade combined so all 4 edges dissolve */
   -webkit-mask-image:
@@ -571,20 +571,22 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 0.9vw, 0.95rem);
+  gap: clamp(0.4rem, 0.6vw, 0.7rem);
   will-change: transform;
 }
 /* Each column scrolls in the opposite Y direction; speeds vary so columns drift independently */
 .mosaic-col-up   { animation: mosaic-up   linear infinite; }
 .mosaic-col-down { animation: mosaic-down linear infinite; }
 /* Slow durations — content takes time to read */
-.mosaic-col-speed-a { animation-duration: 110s; }
-.mosaic-col-speed-b { animation-duration: 135s; }
-.mosaic-col-speed-c { animation-duration: 95s;  }
-.mosaic-col-speed-d { animation-duration: 145s; }
-.mosaic-col-speed-e { animation-duration: 120s; }
-.mosaic-col-speed-f { animation-duration: 100s; }
-.mosaic-col-speed-g { animation-duration: 130s; }
+.mosaic-col-speed-a { animation-duration: 130s; }
+.mosaic-col-speed-b { animation-duration: 165s; }
+.mosaic-col-speed-c { animation-duration: 110s; }
+.mosaic-col-speed-d { animation-duration: 175s; }
+.mosaic-col-speed-e { animation-duration: 145s; }
+.mosaic-col-speed-f { animation-duration: 120s; }
+.mosaic-col-speed-g { animation-duration: 155s; }
+.mosaic-col-speed-h { animation-duration: 140s; }
+.mosaic-col-speed-i { animation-duration: 100s; }
 .mosaic-col:hover { animation-play-state: paused; }
 @keyframes mosaic-up {
   from { transform: translateY(0); }
@@ -625,31 +627,40 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
   .mosaic-col-up, .mosaic-col-down { animation: none; }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
+  .mosaic-stage {
+    grid-template-columns: repeat(7, 1fr);
+    width: 150%;
+    margin-left: -25%;
+    transform: rotate(-9deg);
+  }
+  .mosaic-stage .mosaic-col:nth-child(n+8) { display: none; }
+}
+@media (max-width: 1000px) {
   .mosaic-stage {
     grid-template-columns: repeat(5, 1fr);
-    width: 145%;
-    margin-left: -22%;
-    transform: rotate(-10deg);
+    width: 155%;
+    margin-left: -27%;
+    transform: rotate(-8deg);
   }
   .mosaic-stage .mosaic-col:nth-child(n+6) { display: none; }
 }
-@media (max-width: 760px) {
+@media (max-width: 700px) {
   .mosaic-stage {
     grid-template-columns: repeat(3, 1fr);
     height: clamp(560px, 100vh, 760px);
-    width: 150%;
-    margin-left: -25%;
-    transform: rotate(-8deg);
+    width: 165%;
+    margin-left: -32%;
+    transform: rotate(-7deg);
   }
   .mosaic-stage .mosaic-col:nth-child(n+4) { display: none; }
 }
-@media (max-width: 480px) {
+@media (max-width: 460px) {
   .mosaic-stage {
     grid-template-columns: repeat(2, 1fr);
-    width: 160%;
-    margin-left: -30%;
-    transform: rotate(-6deg);
+    width: 175%;
+    margin-left: -37%;
+    transform: rotate(-5deg);
   }
   .mosaic-stage .mosaic-col:nth-child(n+3) { display: none; }
 }
