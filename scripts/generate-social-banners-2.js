@@ -206,48 +206,7 @@ Right side bold italic serif in deep teal stacked:
 CIGAR."
 Bottom-left tiny uppercase terracotta: "€6 · CRUNCH FIRST. CHIMICHURRI SECOND.".`,
   },
-  {
-    slug: '28-russian-square',
-    size: '1024x1024',
-    prompt: `${BRAND_DNA}
-Square targeting Russian-speaking diners (huge demographic in Cyprus). Overhead of a kraft bowl with hummus topped with slow-cooked beef and chimichurri, beside two fresh pita pieces. Warm cream linen, sun-side-lit.
-Right side bold serif in deep teal — perfect Cyrillic letterforms, no missing accents:
-"Кошер.
-Аргентино-
-средиземноморский."
-Below smaller Cyrillic terracotta:
-"Алкминис 29 · Пафос"
-Bottom-left tiny English uppercase: "ASADO EXPRESS · STRICTLY KOSHER".
-CRITICAL: Cyrillic perfectly rendered.`,
-  },
-  {
-    slug: '29-french-square',
-    size: '1024x1024',
-    prompt: `${BRAND_DNA}
-Square targeting French-speaking tourists. Overhead of a Cypriot pita wrap on cream marble, fillings of slow-cooked beef and chimichurri spilling out, paper-wrapped in branded ASADO craft paper.
-Top-right bold italic serif in deep teal — perfect French diacritics:
-"Cuisine
-argentine
-casher."
-Below smaller terracotta:
-"Paphos · Alkminis 29"
-Bottom-left tiny uppercase terracotta: "ASADO EXPRESS · NOUVELLE ADRESSE".
-CRITICAL: All French accents perfect (è, é, à, ç).`,
-  },
-  {
-    slug: '30-greek-square',
-    size: '1024x1024',
-    prompt: `${BRAND_DNA}
-Square targeting local Greek-speaking Cypriots. Overhead of a vibrant bowl of hand-rolled kebabs over rice with chimichurri and pickled cabbage. Warm cream linen, sun-lit.
-Top bold italic serif in deep teal — perfect Greek polytonic letterforms:
-"Κόσερ
-Αργεντίνικη
-Μεσογειακή."
-Below smaller Greek terracotta:
-"Αλκμήνης 29 · Πάφος"
-Bottom-right tiny English uppercase: "ASADO EXPRESS · OPEN NOW".
-CRITICAL: Greek letters perfectly formed, accents correct.`,
-  },
+  // (RU/FR/EL banners 28-30 dropped — Hebrew + English only per Alon)
 ];
 
 async function ensureDir() { try { await mkdir(OUT_DIR, { recursive: true }); } catch {} }
