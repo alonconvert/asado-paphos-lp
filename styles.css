@@ -1687,19 +1687,63 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
 }
 .visit-map iframe { width: 100%; height: 100%; border: 0; }
 
-/* ============== FOOTER — closing chord ============== */
+/* ============== FOOTER — closing chord (absorbed Visit section) ============== */
 .site-footer {
   position: relative;
   background:
     radial-gradient(120% 70% at 50% 0%, #1f5a55 0%, var(--asado-teal-deep) 55%, #0c2f2c 100%);
   color: var(--cream);
-  padding: clamp(3.5rem, 6vw, 5.5rem) var(--gutter) clamp(2rem, 3vw, 2.6rem);
+  padding: 0 0 clamp(2rem, 3vw, 2.6rem);
   isolation: isolate;
 }
-/* Hairline at the top: terracotta gradient that fades to nothing at the edges */
-.footer-rule {
+
+/* Map band — full-width, rectangular, sits at top of footer */
+.footer-map {
+  position: relative;
+  width: 100%;
+  height: clamp(280px, 40vh, 460px);
+  background: var(--asado-teal-deep);
+  overflow: hidden;
+  isolation: isolate;
+}
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: saturate(0.85) contrast(1.05);
+}
+.footer-map-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  inset: auto auto 1.2rem 1.2rem;
+  z-index: 2;
+  text-decoration: none;
+  pointer-events: auto;
+}
+.footer-map-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.95rem;
+  background: var(--cream);
+  color: var(--asado-teal-deep);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 18px rgba(7, 51, 41, 0.45);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.footer-map-overlay:hover .footer-map-pin {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(7, 51, 41, 0.55);
+}
+.footer-map-pin svg { color: var(--terracotta-deep); }
+
+/* Hairline below the map: terracotta gradient that fades to nothing at the edges */
+.footer-rule {
+  position: relative;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--terracotta) 50%, transparent);
 }
@@ -1708,6 +1752,7 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
   margin: 0 auto;
   display: grid;
   gap: clamp(2rem, 3vw, 3rem);
+  padding: clamp(3rem, 5vw, 4.5rem) var(--gutter) 0;
 }
 
 /* MANTRA — promoted to the footer's first beat */
