@@ -508,6 +508,129 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
 }
 .yt-modal-close:hover { background: rgba(245, 239, 227, 0.28); }
 
+/* ============== UNIFIED MOSAIC GALLERY — tilted scrolling columns ============== */
+.mosaic-gallery {
+  background: var(--cream-deep);
+  padding: var(--section-y) 0 calc(var(--section-y) + 1rem);
+  position: relative;
+  overflow: hidden;
+}
+.mosaic-gallery-header {
+  max-width: var(--container);
+  margin: 0 auto clamp(2rem, 3.5vw, 3rem);
+  padding: clamp(2rem, 4vw, 3.5rem) var(--gutter) 0;
+  text-align: center;
+}
+.mosaic-gallery-header h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 1.8rem + 4vw, 5.6rem);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+  color: var(--asado-teal-deep);
+  margin: 0 0 0.7rem;
+  text-wrap: balance;
+}
+.mosaic-gallery-header h2 em {
+  font-style: italic;
+  color: var(--terracotta-deep);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+}
+.mosaic-gallery-header p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+  font-variation-settings: "opsz" 36, "SOFT" 80;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 50ch;
+}
+.mosaic-stage {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(0.7rem, 1.2vw, 1.2rem);
+  height: clamp(620px, 80vh, 880px);
+  width: 130%;
+  margin-left: -15%;
+  transform: rotate(-8deg);
+  transform-origin: 50% 50%;
+  -webkit-mask-image:
+    radial-gradient(ellipse 95% 95% at 50% 50%, #000 55%, transparent 95%);
+          mask-image:
+    radial-gradient(ellipse 95% 95% at 50% 50%, #000 55%, transparent 95%);
+}
+.mosaic-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.7rem, 1.2vw, 1.2rem);
+  will-change: transform;
+}
+/* Each column scrolls in the opposite Y direction; speeds vary so it doesn't look like one block */
+.mosaic-col-up   { animation: mosaic-up   linear infinite; }
+.mosaic-col-down { animation: mosaic-down linear infinite; }
+.mosaic-col-speed-a { animation-duration: 48s; }
+.mosaic-col-speed-b { animation-duration: 56s; }
+.mosaic-col-speed-c { animation-duration: 42s; }
+.mosaic-col-speed-d { animation-duration: 60s; }
+.mosaic-col-speed-e { animation-duration: 50s; }
+.mosaic-col:hover { animation-play-state: paused; }
+@keyframes mosaic-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+@keyframes mosaic-down {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+.mosaic-col figure {
+  margin: 0;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--asado-teal-deep);
+  box-shadow: 0 6px 18px rgba(7, 51, 41, 0.18), 0 1px 3px rgba(7, 51, 41, 0.12);
+  flex-shrink: 0;
+}
+.mosaic-col figure img,
+.mosaic-col figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+}
+.mosaic-col figure:hover img,
+.mosaic-col figure:hover video { transform: scale(1.06); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mosaic-col-up, .mosaic-col-down { animation: none; }
+}
+
+@media (max-width: 900px) {
+  .mosaic-stage {
+    grid-template-columns: repeat(3, 1fr);
+    height: clamp(560px, 100vh, 760px);
+    width: 140%;
+    margin-left: -20%;
+    transform: rotate(-6deg);
+  }
+  .mosaic-stage .mosaic-col:nth-child(n+4) { display: none; }
+}
+@media (max-width: 560px) {
+  .mosaic-stage {
+    grid-template-columns: repeat(2, 1fr);
+    width: 150%;
+    margin-left: -25%;
+    transform: rotate(-5deg);
+  }
+  .mosaic-stage .mosaic-col:nth-child(n+3) { display: none; }
+}
+
 /* ============== PAPHOS OPENING DAY — full-bleed social proof band ============== */
 .opening-band {
   position: relative;
