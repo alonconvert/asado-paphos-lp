@@ -323,6 +323,7 @@ html[dir="rtl"] .hero-content { justify-items: end; text-align: right; }
 
 .hero-ctas { display: flex; gap: 0.65rem; flex-wrap: wrap; margin-top: 1.4rem; }
 
+/* TIER 1 — primary conversion pill (hero, visit) */
 .cta {
   --cta-bg: var(--cream);
   --cta-fg: var(--asado-teal-deep);
@@ -330,32 +331,149 @@ html[dir="rtl"] .hero-content { justify-items: end; text-align: right; }
   appearance: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.95rem 1.5rem;
+  gap: 0.55rem;
+  padding: 0.95rem 1.6rem;
   border-radius: 999px;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.92rem;
-  letter-spacing: 0.02em;
+  font-size: 0.94rem;
+  letter-spacing: 0.015em;
   text-decoration: none;
   background: var(--cta-bg);
   color: var(--cta-fg);
   border: 1px solid var(--cta-bd);
   cursor: pointer;
-  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  transition:
+    transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 200ms ease,
+    border-color 220ms ease,
+    color 200ms ease;
   box-shadow: 0 8px 22px -8px rgba(7, 51, 41, 0.45);
+  white-space: nowrap;
 }
-.cta:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -12px rgba(7, 51, 41, 0.55); }
+.cta svg { transition: transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1); flex-shrink: 0; }
+.cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 22px 38px -14px rgba(7, 51, 41, 0.6), 0 2px 4px rgba(7, 51, 41, 0.18);
+}
+.cta:hover svg { transform: translateX(2px) scale(1.08); }
+.cta:active {
+  transform: translateY(-1px) scale(0.985);
+  box-shadow: 0 6px 14px -6px rgba(7, 51, 41, 0.5);
+  transition-duration: 90ms;
+}
+
+/* HERO primary (loud terracotta) */
 .cta-primary { --cta-bg: var(--terracotta); --cta-fg: var(--bone); }
 .cta-primary:hover { --cta-bg: var(--terracotta-deep); }
+.cta-hero {
+  padding: 1.1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  box-shadow:
+    0 14px 34px -10px rgba(196, 106, 59, 0.55),
+    0 2px 0 rgba(0, 0, 0, 0.18) inset;
+}
+.cta-hero:hover {
+  box-shadow:
+    0 22px 44px -12px rgba(196, 106, 59, 0.7),
+    0 2px 0 rgba(0, 0, 0, 0.22) inset;
+}
+
+/* WhatsApp variant (used as primary on cta-hero now) */
 .cta-whatsapp { --cta-bg: #25D366; --cta-fg: #07331f; }
+.cta-whatsapp:hover { --cta-bg: #1EBD58; }
+.cta-whatsapp:hover svg { transform: rotate(-8deg) scale(1.1); }
+.cta-primary.cta-whatsapp,
+.cta-hero.cta-primary { --cta-bg: #25D366; --cta-fg: #07331f; }
+.cta-hero.cta-primary:hover { --cta-bg: #1EBD58; }
+.cta-hero.cta-primary {
+  box-shadow:
+    0 14px 34px -10px rgba(37, 211, 102, 0.5),
+    0 2px 0 rgba(0, 0, 0, 0.18) inset;
+}
+.cta-hero.cta-primary:hover {
+  box-shadow:
+    0 22px 44px -12px rgba(37, 211, 102, 0.65),
+    0 2px 0 rgba(0, 0, 0, 0.22) inset;
+}
+
+/* Ghost — secondary action */
 .cta-ghost {
   --cta-bg: transparent;
   --cta-fg: var(--bone);
   --cta-bd: rgba(250, 246, 238, 0.5);
   box-shadow: none;
 }
-.cta-ghost:hover { background: rgba(250, 246, 238, 0.12); }
+.cta-ghost:hover {
+  background: rgba(250, 246, 238, 0.12);
+  border-color: var(--bone);
+  box-shadow:
+    inset 0 0 0 1px rgba(250, 246, 238, 0.3),
+    0 10px 24px -12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+.cta-hero-secondary { padding: 0.9rem 1.6rem; font-size: 0.94rem; }
+
+/* Tertiary text-link (no pill) */
+.cta-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(250, 246, 238, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(250, 246, 238, 0.4);
+  transition: color 220ms ease, border-color 220ms ease, transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.cta-text svg { transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.cta-text:hover {
+  color: var(--bone);
+  border-color: var(--terracotta);
+  transform: translateY(-1px);
+}
+.cta-text:hover svg { transform: translateX(2px) scale(1.15); }
+
+/* Hero CTAs row: align primary + ghost + text-link with breathing room */
+.hero-ctas {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.1rem;
+}
+.hero-ctas .cta-text { margin-inline-start: 0.4rem; }
+
+/* Loading + disabled states */
+.cta[aria-busy="true"] {
+  color: transparent;
+  pointer-events: none;
+  position: relative;
+}
+.cta[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 18px; height: 18px;
+  border: 2px solid var(--cta-fg);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: cta-spin 720ms linear infinite;
+  opacity: 1;
+}
+@keyframes cta-spin { to { transform: rotate(360deg); } }
+.cta[disabled], .cta[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
 
 .hero-scroll {
   position: absolute;
@@ -2157,4 +2275,65 @@ html[lang="ar"] .hero-line em { font-style: normal; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-scroll { animation: none; }
+}
+
+/* ============== BUTTON SYSTEM POLISH (4-agent panel) ============== */
+
+/* Mobile action bar: bigger tap targets, accent stripe on primary, icon micro-scale */
+.mab-action {
+  min-height: 56px;
+  transition: background 200ms ease, transform 90ms ease;
+}
+.mab-action svg { transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.mab-action:hover svg { transform: scale(1.12); }
+.mab-action-primary { box-shadow: inset 0 2px 0 var(--terracotta); }
+.mab-action-whatsapp { box-shadow: inset 0 2px 0 #25D366; }
+.mab-action:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+/* Footer action pills: icon micro-motion + tighter spring */
+.footer-action {
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 200ms ease;
+}
+.footer-action svg { transition: transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.footer-action:hover svg { transform: translateX(1px) scale(1.1); }
+.footer-action-whatsapp:hover svg { transform: rotate(-8deg) scale(1.12); }
+
+/* Footer social: tier-3 (square-ish radius, not full circle), rotate-in on hover */
+.footer-social a {
+  border-radius: 12px;     /* was 50% — tier-3 spec from UI agent */
+  transition:
+    background 220ms ease,
+    transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 220ms ease;
+}
+.footer-social a:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  transform: translateY(-3px) rotate(-6deg) scale(1.08);
+}
+
+/* Map pin: bigger, with literal arrow alignment */
+.footer-map-pin {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.86rem;
+  gap: 0.55rem;
+  box-shadow: 0 8px 22px rgba(7, 51, 41, 0.35);
+}
+.footer-map-overlay:hover .footer-map-pin {
+  box-shadow: 0 12px 28px rgba(7, 51, 41, 0.5);
+}
+
+/* Hero scroll cue: focus-visible + reduce contrast issue */
+.hero-scroll:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 4px;
+  border-radius: 8px;
 }
