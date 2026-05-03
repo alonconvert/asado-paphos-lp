@@ -721,6 +721,77 @@ html[dir="rtl"] .marquee-track { animation-direction: reverse; }
   .paphos-tile-tall { grid-row: span 1; }
 }
 
+/* ============== FRESH TODAY — horizontal marquee of real product photos ============== */
+.fresh-marquee {
+  background: var(--cream);
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+  overflow: hidden;
+  position: relative;
+}
+.fresh-marquee-header {
+  max-width: var(--container);
+  margin: 0 auto clamp(1.5rem, 2.5vw, 2.5rem);
+  padding: 0 var(--gutter);
+  text-align: center;
+}
+.fresh-marquee-header .eyebrow {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--terracotta-deep);
+}
+.fresh-marquee-header h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2rem, 1.4rem + 2.5vw, 3.6rem);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--asado-teal-deep);
+  margin: 0;
+}
+.fresh-marquee-track {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+}
+.fresh-marquee-row {
+  display: flex;
+  gap: clamp(0.8rem, 1.4vw, 1.4rem);
+  animation: fresh-scroll 38s linear infinite;
+  width: max-content;
+}
+.fresh-marquee-row:hover { animation-play-state: paused; }
+.fresh-marquee-row figure {
+  flex: 0 0 clamp(220px, 22vw, 320px);
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--cream-deep);
+  box-shadow: var(--shadow-card);
+}
+.fresh-marquee-row img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1);
+}
+.fresh-marquee-row figure:hover img { transform: scale(1.06); }
+@keyframes fresh-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fresh-marquee-row { animation: none; }
+}
+
 /* ============== KITCHEN STRIP — autoplay video tiles ============== */
 .kitchen-strip {
   background: var(--asado-teal-darker);

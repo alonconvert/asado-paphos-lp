@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;700;900&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Serif+Hebrew:wght@500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=0a46b75-1777806078" />
+  <link rel="stylesheet" href="styles.css?v=5ee1484-1777806374" />
   <meta property="og:title" content="ASADO Express · Paphos" />
   <meta property="og:description" content="The new Paphos branch of ASADO Nice to Meat. Kosher Argentinian-Mediterranean. Asado, kebabs, hummus bowls, pita wraps." />
   <meta property="og:image" content="assets/images/hero-hummus-asado.png" />
@@ -238,6 +238,7 @@
       </header>
 
       <div class="paphos-collage">
+        <!-- Hero: kiosk reel (8 col x 2 row) + 2 tall videos beside it -->
         <figure class="paphos-tile paphos-tile-hero">
           <span class="paphos-tile-tag" data-i18n="paphos.tag.live">Live</span>
           <video src="assets/video/paphos-kiosk-reel.mp4" poster="assets/video/paphos-kiosk-reel-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
@@ -249,23 +250,74 @@
           <figcaption data-i18n="paphos.cap.patio">The patio, at golden hour</figcaption>
         </figure>
 
+        <!-- Row of 3: video + still + still -->
+        <figure class="paphos-tile">
+          <video src="assets/video/paphos-customers-eating.mp4" poster="assets/video/paphos-customers-eating-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+          <figcaption data-i18n="paphos.cap.eating">Built to order. Served hot.</figcaption>
+        </figure>
         <figure class="paphos-tile">
           <img src="assets/video/paphos-tables-still.jpg" alt="Tables ready inside ASADO Express Paphos" loading="lazy" />
         </figure>
-
         <figure class="paphos-tile">
           <img src="assets/video/paphos-exterior-still.jpg" alt="ASADO Express Paphos exterior on Alkminis 29" loading="lazy" />
         </figure>
 
-        <figure class="paphos-tile paphos-tile-wide">
-          <video src="assets/video/paphos-customers-eating.mp4" poster="assets/video/paphos-customers-eating-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
-          <figcaption data-i18n="paphos.cap.eating">Built to order. Served hot.</figcaption>
+        <!-- Row of 3: people shots -->
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-people-2.jpg" alt="Customers enjoying lunch at ASADO Express Paphos" loading="lazy" />
+        </figure>
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-people-3.jpg" alt="Family meal at ASADO Express Paphos" loading="lazy" />
+        </figure>
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-people-4.jpg" alt="Friends sharing a table at ASADO Express Paphos" loading="lazy" />
         </figure>
 
+        <!-- Row: wide customer shot + 2 stills -->
+        <figure class="paphos-tile paphos-tile-wide">
+          <img src="assets/video/paphos-customers-wide.jpg" alt="The dining room at ASADO Express Paphos" loading="lazy" />
+        </figure>
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-customers-tight.jpg" alt="Close-up at ASADO Express Paphos" loading="lazy" />
+        </figure>
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-customers-still.jpg" alt="Customers at ASADO Express Paphos" loading="lazy" />
+        </figure>
+
+        <!-- Row: video + 2 stills -->
         <figure class="paphos-tile">
           <video src="assets/video/paphos-patio-empty.mp4" poster="assets/video/paphos-patio-empty-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
           <figcaption data-i18n="paphos.cap.exterior">Alkminis 29 — opening</figcaption>
         </figure>
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-customers-late.jpg" alt="Late evening at ASADO Express Paphos" loading="lazy" />
+        </figure>
+        <figure class="paphos-tile">
+          <img src="assets/video/paphos-kiosk-still.jpg" alt="The order kiosks at ASADO Express Paphos" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== FRESH TODAY — horizontal marquee of real product photos ============== -->
+    <section class="fresh-marquee" aria-label="Fresh from the kitchen today">
+      <div class="fresh-marquee-header">
+        <span class="eyebrow" data-i18n="fresh.eyebrow">Fresh today</span>
+        <h2 data-i18n="fresh.title">Straight from the kitchen.</h2>
+      </div>
+      <div class="fresh-marquee-track" aria-hidden="false">
+        <div class="fresh-marquee-row">
+          <figure><img src="assets/images/real/hummus-chimichurri-real.jpg" alt="House hummus with chimichurri and golden olive oil" loading="lazy" /></figure>
+          <figure><img src="assets/images/real/schnitzel-bowl-real.jpg" alt="Chicken schnitzel over saffron rice with Israeli salad" loading="lazy" /></figure>
+          <figure><img src="assets/images/real/asado-pita-real.jpg" alt="Slow-cooked asado in branded ASADO craft bowl" loading="lazy" /></figure>
+          <figure><img src="assets/images/real/jerusalem-mix-real.jpg" alt="Jerusalem mix in branded ASADO bowl with Coca-Cola wax paper" loading="lazy" /></figure>
+          <figure><img src="assets/images/real/asado-burger-real.jpg" alt="Pulled-beef burger with chimichurri and golden fries" loading="lazy" /></figure>
+          <!-- duplicate set for seamless loop -->
+          <figure aria-hidden="true"><img src="assets/images/real/hummus-chimichurri-real.jpg" alt="" loading="lazy" /></figure>
+          <figure aria-hidden="true"><img src="assets/images/real/schnitzel-bowl-real.jpg" alt="" loading="lazy" /></figure>
+          <figure aria-hidden="true"><img src="assets/images/real/asado-pita-real.jpg" alt="" loading="lazy" /></figure>
+          <figure aria-hidden="true"><img src="assets/images/real/jerusalem-mix-real.jpg" alt="" loading="lazy" /></figure>
+          <figure aria-hidden="true"><img src="assets/images/real/asado-burger-real.jpg" alt="" loading="lazy" /></figure>
+        </div>
       </div>
     </section>
 
@@ -288,6 +340,15 @@
         </figure>
         <figure class="atm-photo">
           <img src="assets/lifestyle/atm-5.jpg" alt="Customers at ASADO" loading="lazy" />
+        </figure>
+        <figure class="atm-photo">
+          <img src="assets/lifestyle/atm-6.jpg" alt="A meal in progress at ASADO Limassol" loading="lazy" />
+        </figure>
+        <figure class="atm-photo atm-photo-wide">
+          <img src="assets/lifestyle/atm-7.jpg" alt="Diners enjoying ASADO Limassol" loading="lazy" />
+        </figure>
+        <figure class="atm-photo">
+          <img src="assets/lifestyle/profile-1.jpg" alt="Owner at ASADO" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -624,9 +685,9 @@
     <div class="yt-modal-frame" id="yt-modal-frame"></div>
   </div>
 
-  <script src="i18n.js?v=0a46b75-1777806078" defer></script>
+  <script src="i18n.js?v=5ee1484-1777806374" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="animations.js?v=0a46b75-1777806078" defer></script>
+  <script src="animations.js?v=5ee1484-1777806374" defer></script>
 </body>
 </html>
