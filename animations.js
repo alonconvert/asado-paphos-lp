@@ -115,8 +115,44 @@
     });
   }
 
+  function setupYouTube() {
+    const modal = document.getElementById('yt-modal');
+    const frame = document.getElementById('yt-modal-frame');
+    if (!modal || !frame) return;
+    const closeBtn = modal.querySelector('.yt-modal-close');
+
+    function open(videoId) {
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      modal.hidden = true;
+      frame.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-yt-play]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(btn.getAttribute('data-yt-play'));
+      });
+    });
+    document.querySelectorAll('[data-yt-launch]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const fallback = document.querySelector('[data-yt-play]');
+        if (fallback) open(fallback.getAttribute('data-yt-play'));
+      });
+    });
+    closeBtn?.addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) close(); });
+  }
+
   function init() {
     setupHeader();
+    setupYouTube();
     if (reduced) {
       fallbackReveal();
       return;

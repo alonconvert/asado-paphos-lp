@@ -3,34 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title data-i18n="meta.title">ASADO Express Paphos · Kosher Argentinian-Mediterranean</title>
-  <meta name="description" data-i18n="meta.description" content="Kosher Argentinian-Mediterranean kitchen in Paphos. Slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. Alkminis 29, Paphos." />
-  <meta name="theme-color" content="#0E4D40" />
+  <title data-i18n="meta.title">ASADO Express Paphos · Sister to Old Port Limassol</title>
+  <meta name="description" data-i18n="meta.description" content="ASADO Express, the new Paphos branch of ASADO Nice to Meat (Old Port Limassol). Kosher Argentinian-Mediterranean kitchen — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. Alkminis 29, Paphos." />
+  <meta name="theme-color" content="#073329" />
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Serif+Hebrew:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;700;900&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Serif+Hebrew:wght@500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <meta property="og:title" content="ASADO Express · Paphos" />
-  <meta property="og:description" content="Kosher Argentinian-Mediterranean kitchen in Paphos. Asado, kebabs, hummus bowls, pita wraps." />
+  <meta property="og:description" content="The new Paphos branch of ASADO Nice to Meat. Kosher Argentinian-Mediterranean. Asado, kebabs, hummus bowls, pita wraps." />
   <meta property="og:image" content="assets/images/hero-hummus-asado.png" />
   <meta property="og:type" content="restaurant.restaurant" />
 </head>
 <body>
 
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="dash-orn" viewBox="0 0 200 12">
+        <line x1="0" y1="6" x2="80" y2="6" stroke="currentColor" stroke-width="1.2" />
+        <circle cx="92" cy="6" r="2.2" fill="currentColor" />
+        <path d="M100 1 L108 6 L100 11 Z" fill="currentColor" />
+        <circle cx="116" cy="6" r="2.2" fill="currentColor" />
+        <line x1="128" y1="6" x2="200" y2="6" stroke="currentColor" stroke-width="1.2" />
+      </symbol>
+      <symbol id="star" viewBox="0 0 24 24">
+        <path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.6L6 22l1.5-7.2L2 10l7.1-1.1z" fill="currentColor"/>
+      </symbol>
+      <symbol id="play-arrow" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="30" fill="currentColor" opacity="0.92"/>
+        <path d="M26 22 L26 42 L44 32 Z" fill="#073329"/>
+      </symbol>
+      <symbol id="quote-mark" viewBox="0 0 32 32">
+        <path d="M6 22 Q4 14 12 8 L14 12 Q10 14 10 18 L14 18 L14 24 L6 24 Z M20 22 Q18 14 26 8 L28 12 Q24 14 24 18 L28 18 L28 24 L20 24 Z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ============== HEADER ============== -->
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="#top" class="brand" aria-label="ASADO Express Paphos">
-        <svg class="brand-cow" viewBox="0 0 64 32" aria-hidden="true">
-          <path d="M8 22 Q4 18 6 14 Q4 12 8 10 Q12 6 18 8 Q22 4 28 6 L36 6 Q42 4 46 8 Q52 6 56 10 Q60 12 58 14 Q60 18 56 22 L52 26 L46 24 L44 28 L40 26 L36 28 L32 26 L28 28 L24 26 L20 28 L18 24 L12 26 Z M22 14 a1.5 1.5 0 1 0 0.01 0 Z M42 14 a1.5 1.5 0 1 0 0.01 0 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-        </svg>
-        <span class="brand-name">
-          <span class="brand-asado">ASADO</span>
-          <span class="brand-tag">Nice to Meat · <em>express</em></span>
-        </span>
+      <a href="#top" class="brand" aria-label="ASADO Express Paphos · Sister to Old Port Limassol">
+        <img class="brand-logo" src="assets/logo-real/asado-logo.png" alt="ASADO Nice to Meat" width="146" height="50" />
+        <span class="brand-stamp">Paphos</span>
       </a>
-
+      <nav class="header-nav" aria-label="Sections">
+        <a href="#video" data-i18n="nav.video">Watch</a>
+        <a href="#bowls" data-i18n="nav.menu">Menu</a>
+        <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="#visit" data-i18n="nav.visit">Visit</a>
+      </nav>
       <div class="lang-switch" data-lang-switch>
         <button type="button" class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false">
           <span id="lang-current">EN</span>
@@ -56,68 +78,179 @@
       <div class="hero-photo">
         <picture>
           <source srcset="assets/images/hero-hummus-asado.webp" type="image/webp" />
-          <img src="assets/images/hero-hummus-asado.png" alt="" loading="eager" fetchpriority="high" />
+          <img src="assets/images/hero-hummus-asado.png" alt="Hummus topped with slow-cooked asado" loading="eager" fetchpriority="high" />
         </picture>
       </div>
-      <div class="hero-overlay"></div>
+      <div class="hero-vignette"></div>
+
+      <!-- Sister-branch ribbon -->
+      <p class="hero-sister" data-i18n="hero.sister">A new branch of ASADO Nice to Meat · Old Port Limassol</p>
+
       <div class="hero-content">
-        <div class="kosher-badge" aria-label="Kosher certified">
-          <span lang="he" dir="rtl">כשר</span>
-          <span data-i18n="hero.kosher">Kosher</span>
-        </div>
         <h1 class="hero-title" id="hero-title">
-          <span class="hero-title-main" data-i18n="hero.title">Where Taste Meets Pleasure</span>
-          <span class="hero-title-sub" data-i18n="hero.subtitle">Now open in Paphos</span>
+          <span class="hero-line" data-i18n="hero.line1">Where taste</span>
+          <span class="hero-line"><em data-i18n="hero.line2">meets</em> <span data-i18n="hero.line3">pleasure.</span></span>
         </h1>
-        <p class="hero-tagline" data-i18n="hero.tagline">Authentic kosher Argentinian cuisine with a Mediterranean touch — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps.</p>
+
+        <p class="hero-tagline" data-i18n="hero.tagline">Authentic kosher Argentinian cuisine with a Mediterranean touch — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. Now open in the heart of Paphos.</p>
+
         <div class="hero-ctas">
-          <a class="cta cta-primary" href="tel:+35797660007" data-i18n="cta.call">
+          <a class="cta cta-primary" href="tel:+35797660007">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4a2 2 0 0 1 2-2h2.5a1 1 0 0 1 .97.76l1.06 4.24a1 1 0 0 1-.27.95l-1.7 1.7a14 14 0 0 0 6.07 6.07l1.7-1.7a1 1 0 0 1 .95-.27l4.24 1.06a1 1 0 0 1 .76.97V18a2 2 0 0 1-2 2h-1C9.61 20 4 14.39 4 7V6a2 2 0 0 1 1-1.7Z" fill="currentColor"/></svg>
-            <span>Call</span>
+            <span data-i18n="cta.call">Call us</span>
           </a>
-          <a class="cta cta-whatsapp" href="https://wa.me/35797660007" data-i18n="cta.whatsapp" target="_blank" rel="noopener">
+          <a class="cta cta-whatsapp" href="https://wa.me/35797660007" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm5.4 14.4c-.2.6-1.3 1.2-1.8 1.3-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .5-.1.2-.2.3-.4.5-.1.2-.3.3-.4.5s-.3.4-.1.7c.2.4.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.6.3.1.5.1.7-.1.2-.2.8-.9.9-1.2.1-.3.3-.2.5-.1.2.1 1.4.7 1.6.8.3.1.4.2.5.3.1.2.1.7-.1 1.4Z" fill="currentColor"/></svg>
-            <span>WhatsApp</span>
+            <span data-i18n="cta.whatsapp">WhatsApp</span>
           </a>
-          <a class="cta cta-ghost" href="#visit" data-i18n="cta.directions">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
-            <span>Directions</span>
+          <a class="cta cta-ghost" href="#video">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <span data-i18n="cta.watch">Watch the video</span>
           </a>
         </div>
       </div>
-      <a href="#story" class="hero-scroll" aria-label="Scroll for more">
-        <svg viewBox="0 0 24 32" width="20" height="28" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="1.6" fill="currentColor"><animate attributeName="cy" from="9" to="15" dur="1.4s" repeatCount="indefinite" /></circle></svg>
+
+      <a href="#video" class="hero-scroll" aria-label="Scroll for more">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <svg viewBox="0 0 24 32" width="14" height="20" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="1.6" fill="currentColor"><animate attributeName="cy" from="9" to="15" dur="1.4s" repeatCount="indefinite" /></circle></svg>
       </a>
+    </section>
+
+    <!-- ============== MARQUEE ============== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Slow-cooked Asado</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Fresh Hummus, Daily</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Hand-rolled Kebabs</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Cypriot Pita, Hot off the Grill</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Strictly Kosher</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Family-run since 2024</span><span class="marquee-dot">✦</span>
+        <!-- duplicate -->
+        <span class="marquee-item">Slow-cooked Asado</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Fresh Hummus, Daily</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Hand-rolled Kebabs</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Cypriot Pita, Hot off the Grill</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Strictly Kosher</span><span class="marquee-dot">✦</span>
+        <span class="marquee-item">Family-run since 2024</span><span class="marquee-dot">✦</span>
+      </div>
+    </div>
+
+    <!-- ============== VIDEO FEATURE — YouTube hero ============== -->
+    <section class="video-feature" id="video" aria-labelledby="video-title">
+      <div class="video-feature-grid">
+        <div class="video-feature-text">
+          <p class="eyebrow" data-i18n="video.eyebrow">From our kitchen</p>
+          <h2 id="video-title" data-i18n="video.title">Watch how we do it.</h2>
+          <p data-i18n="video.body">Hand-cut beef, fresh-pressed hummus, kebabs rolled to order. Two minutes inside the kitchen that turns Argentinian fire into Mediterranean comfort food.</p>
+          <a class="cta cta-primary" href="#" data-yt-launch>
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <span data-i18n="video.cta">Play video</span>
+          </a>
+        </div>
+
+        <div class="video-feature-frame" data-yt-frame>
+          <button class="video-frame-poster" type="button" data-yt-play="9rsXbeyYzQI" aria-label="Play ASADO video">
+            <img src="assets/lifestyle/yt-thumb.jpg" alt="" loading="lazy" />
+            <span class="video-play"><svg aria-hidden="true"><use href="#play-arrow"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== KITCHEN VIDEO STRIP — 4 ambient clips ============== -->
+    <section class="kitchen-strip" aria-label="Inside the kitchen">
+      <div class="kitchen-grid">
+        <figure class="kitchen-clip" style="--span: 7">
+          <video src="assets/video/kitchen-meat-slicing.mp4" poster="assets/video/kitchen-meat-slicing-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+          <figcaption data-i18n="kitchen.meat">Hand-sliced, every morning</figcaption>
+        </figure>
+        <figure class="kitchen-clip" style="--span: 5">
+          <video src="assets/video/kitchen-hummus-bowl.mp4" poster="assets/video/kitchen-hummus-bowl-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+          <figcaption data-i18n="kitchen.hummus">Fresh hummus, twice daily</figcaption>
+        </figure>
+        <figure class="kitchen-clip" style="--span: 5">
+          <video src="assets/video/kitchen-prep-station.mp4" poster="assets/video/kitchen-prep-station-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+          <figcaption data-i18n="kitchen.prep">Salads &amp; pickles, in-house</figcaption>
+        </figure>
+        <figure class="kitchen-clip" style="--span: 7">
+          <video src="assets/video/kitchen-bowls-served.mp4" poster="assets/video/kitchen-bowls-served-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+          <figcaption data-i18n="kitchen.served">Built to order, served hot</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ============== STORY ============== -->
     <section class="story" id="story" aria-labelledby="story-title">
+      <div class="chapter-rail" aria-hidden="true">
+        <span class="chapter-num">I</span>
+        <span class="chapter-label" data-i18n="story.eyebrow">Our story</span>
+      </div>
+
       <div class="story-grid">
         <div class="story-text">
-          <p class="eyebrow" data-i18n="story.eyebrow">Our story</p>
-          <h2 id="story-title" data-i18n="story.title">From Limassol's Old Port to Paphos.</h2>
-          <p data-i18n="story.body1">After years of grilling some of Cyprus's most loved kosher Argentinian food on the Limassol harbour, we've crossed the island. ASADO Express brings the same slow-cooked beef, hand-rolled kebabs, and fresh-pressed hummus — now in the heart of Paphos.</p>
-          <p data-i18n="story.body2">Every dish is a masterpiece; every sizzle is a harmony of cultural fusion. Argentinian fire meets Mediterranean soul, all kept strictly kosher.</p>
+          <h2 id="story-title" data-i18n="story.title">From the Old Port of Limassol, all the way to Paphos.</h2>
+          <p class="story-lead"><span class="dropcap">A</span><span data-i18n="story.body1">fter years of grilling some of Cyprus's most loved kosher Argentinian food on the Limassol harbour, the family crossed the island. ASADO Express brings the same slow-cooked beef, the same hand-rolled kebabs, and the same fresh-pressed hummus — now in the heart of Paphos, a few minutes from the harbour.</span></p>
+
+          <aside class="story-pull">
+            <svg class="pull-quote-mark" aria-hidden="true"><use href="#quote-mark"/></svg>
+            <span data-i18n="story.pull">Argentinian fire. Mediterranean soul. Strictly kosher.</span>
+          </aside>
+
+          <p data-i18n="story.body2">Run by the same family. The same recipes. The same warm welcome — now under the Paphos sun.</p>
         </div>
+
         <figure class="story-photo">
-          <picture class="story-photo-frame">
+          <picture>
             <source srcset="assets/images/storefront.webp" type="image/webp" />
             <img src="assets/images/storefront.jpg" alt="ASADO Express storefront on Alkminis 29, Paphos" loading="lazy" />
           </picture>
-          <figcaption data-i18n="story.caption">Alkminis 29 · Paphos</figcaption>
+          <figcaption>
+            <span class="figcaption-num">Fig. 01</span>
+            <span data-i18n="story.caption">Alkminis 29 · The new Paphos branch</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== ATMOSPHERE — real Limassol photos showing community ============== -->
+    <section class="atmosphere" aria-label="The ASADO atmosphere">
+      <div class="atm-grid">
+        <figure class="atm-photo atm-photo-tall">
+          <img src="assets/lifestyle/atm-1.jpg" alt="Friends laughing over lunch at ASADO Old Port Limassol" loading="lazy" />
+        </figure>
+        <figure class="atm-photo">
+          <img src="assets/lifestyle/atm-3.jpg" alt="The owner with happy customers at ASADO" loading="lazy" />
+          <figcaption data-i18n="atm.owner">The owner stops by every table.</figcaption>
+        </figure>
+        <figure class="atm-photo">
+          <img src="assets/lifestyle/atm-2.jpg" alt="Inside ASADO Old Port Limassol" loading="lazy" />
+        </figure>
+        <figure class="atm-photo atm-photo-wide">
+          <img src="assets/lifestyle/atm-4.jpg" alt="The kitchen at ASADO" loading="lazy" />
+          <figcaption data-i18n="atm.kitchen">Where it all happens.</figcaption>
+        </figure>
+        <figure class="atm-photo">
+          <img src="assets/lifestyle/atm-5.jpg" alt="Customers at ASADO" loading="lazy" />
         </figure>
       </div>
     </section>
 
     <!-- ============== BOWLS ============== -->
-    <section class="menu menu-bowls" id="bowls" aria-labelledby="bowls-title">
-      <header class="menu-header">
-        <p class="eyebrow" data-i18n="bowls.eyebrow">The signature</p>
-        <h2 id="bowls-title" data-i18n="bowls.title">Bowls</h2>
-        <p class="menu-sub" data-i18n="bowls.sub">Hearty, layered, ready in minutes. Each one a meal on its own.</p>
+    <section class="menu-section bowls-section" id="bowls" aria-labelledby="bowls-title">
+      <div class="chapter-rail" aria-hidden="true">
+        <span class="chapter-num">II</span>
+        <span class="chapter-label" data-i18n="bowls.eyebrow">The signature</span>
+      </div>
+
+      <header class="section-header section-header-split">
+        <h2 id="bowls-title" data-i18n="bowls.title">Bowls.</h2>
+        <p class="section-sub" data-i18n="bowls.sub">Hearty, layered, ready in minutes. Each one a meal on its own, served in our signature kraft bowl.</p>
+        <svg class="header-orn" aria-hidden="true"><use href="#dash-orn"/></svg>
       </header>
-      <div class="dish-grid">
-        <article class="dish-card" data-reveal>
+
+      <div class="bowls-magazine">
+        <article class="dish-card dish-feature" data-reveal>
+          <span class="dish-num">i</span>
           <div class="dish-photo"><picture><source srcset="assets/images/asado-bowl.webp" type="image/webp" /><img src="assets/images/asado-bowl.png" alt="" loading="lazy" /></picture></div>
           <div class="dish-meta">
             <h3 data-i18n="dish.asado.name">Asado</h3>
@@ -126,135 +259,201 @@
           <p class="dish-desc" data-i18n="dish.asado.desc">Slow-cooked Argentinian short rib over rice with chimichurri.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: 12px">
+          <span class="dish-num">ii</span>
           <div class="dish-photo"><picture><source srcset="assets/images/boneless-chicken-bowl.webp" type="image/webp" /><img src="assets/images/boneless-chicken-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.boneless.name">Boneless Chicken</h3>
-            <span class="dish-price">€16</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.boneless.name">Boneless Chicken</h3><span class="dish-price">€16</span></div>
           <p class="dish-desc" data-i18n="dish.boneless.desc">Grilled chicken thigh, saffron rice, Mediterranean salad, tahini.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: -12px">
+          <span class="dish-num">iii</span>
           <div class="dish-photo"><picture><source srcset="assets/images/kebab-bowl.webp" type="image/webp" /><img src="assets/images/kebab-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.kebab.name">Kebab</h3>
-            <span class="dish-price">€17</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.kebab.name">Kebab</h3><span class="dish-price">€17</span></div>
           <p class="dish-desc" data-i18n="dish.kebab.desc">Hand-rolled lamb-and-beef kebabs, grilled vegetables, harissa.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: 8px">
+          <span class="dish-num">iv</span>
           <div class="dish-photo"><picture><source srcset="assets/images/jerusalem-mix-bowl.webp" type="image/webp" /><img src="assets/images/jerusalem-mix-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.jerusalem.name">Jerusalem Mix</h3>
-            <span class="dish-price">€17</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.jerusalem.name">Jerusalem Mix</h3><span class="dish-price">€17</span></div>
           <p class="dish-desc" data-i18n="dish.jerusalem.desc">Classic me'urav: chicken hearts, livers, onion, cumin, sumac.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: -10px">
+          <span class="dish-num">v</span>
           <div class="dish-photo"><picture><source srcset="assets/images/ribeye-entrecote-bowl.webp" type="image/webp" /><img src="assets/images/ribeye-entrecote-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.ribeye.name">Ribeye Entrecôte</h3>
-            <span class="dish-price">€20</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.ribeye.name">Ribeye Entrecôte</h3><span class="dish-price">€20</span></div>
           <p class="dish-desc" data-i18n="dish.ribeye.desc">Premium grilled entrecôte over arugula, balsamic, sea salt.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: 14px">
+          <span class="dish-num">vi</span>
           <div class="dish-photo"><picture><source srcset="assets/images/hummus-asado-bowl.webp" type="image/webp" /><img src="assets/images/hummus-asado-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.hum-asado.name">Hummus &amp; Asado</h3>
-            <span class="dish-price">€16</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.hum-asado.name">Hummus &amp; Asado</h3><span class="dish-price">€16</span></div>
           <p class="dish-desc" data-i18n="dish.hum-asado.desc">Creamy hummus crowned with slow-cooked asado and pickled chili.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: -8px">
+          <span class="dish-num">vii</span>
           <div class="dish-photo"><picture><source srcset="assets/images/hummus-kebab-bowl.webp" type="image/webp" /><img src="assets/images/hummus-kebab-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.hum-kebab.name">Hummus &amp; Kebab</h3>
-            <span class="dish-price">€14</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.hum-kebab.name">Hummus &amp; Kebab</h3><span class="dish-price">€14</span></div>
           <p class="dish-desc" data-i18n="dish.hum-kebab.desc">Hummus topped with two grilled kebabs, sumac and red onion.</p>
         </article>
 
-        <article class="dish-card" data-reveal>
+        <article class="dish-card" data-reveal style="--shift: 10px">
+          <span class="dish-num">viii</span>
           <div class="dish-photo"><picture><source srcset="assets/images/chicken-schnitzel-bowl.webp" type="image/webp" /><img src="assets/images/chicken-schnitzel-bowl.png" alt="" loading="lazy" /></picture></div>
-          <div class="dish-meta">
-            <h3 data-i18n="dish.schnitzel.name">Chicken Schnitzel</h3>
-            <span class="dish-price">€16</span>
-          </div>
+          <div class="dish-meta"><h3 data-i18n="dish.schnitzel.name">Chicken Schnitzel</h3><span class="dish-price">€16</span></div>
           <p class="dish-desc" data-i18n="dish.schnitzel.desc">Crispy breaded chicken cutlets, Israeli salad, lemon, tahini.</p>
         </article>
       </div>
 
-      <p class="menu-footnote" data-i18n="bowls.more">Also on the bowl menu: Chicken Leg · Hummus &amp; Pulled Chicken · Hummus &amp; Jerusalem Mix · Hummus &amp; Ribeye Entrecôte · Hummus &amp; Sabich · Hummus &amp; Boneless Chicken · Plain Hummus.</p>
+      <p class="menu-footnote">
+        <svg class="footnote-orn" aria-hidden="true"><use href="#dash-orn"/></svg>
+        <span data-i18n="bowls.more">Also on the bowl menu: Chicken Leg · Hummus &amp; Pulled Chicken · Hummus &amp; Jerusalem Mix · Hummus &amp; Ribeye Entrecôte · Hummus &amp; Sabich · Hummus &amp; Boneless Chicken · Plain Hummus.</span>
+      </p>
+    </section>
+
+    <!-- ============== INTERLUDE ============== -->
+    <section class="interlude" aria-hidden="true">
+      <div class="interlude-bg">
+        <picture>
+          <source srcset="assets/images/hero-hummus-asado.webp" type="image/webp" />
+          <img src="assets/images/hero-hummus-asado.png" alt="" loading="lazy" />
+        </picture>
+      </div>
+      <div class="interlude-overlay"></div>
+      <blockquote class="interlude-quote">
+        <span class="interlude-line" data-i18n="interlude.l1">Hand-rolled.</span>
+        <span class="interlude-line interlude-line-em"><em data-i18n="interlude.l2">Slow-grilled.</em></span>
+        <span class="interlude-line" data-i18n="interlude.l3">Strictly kosher.</span>
+      </blockquote>
     </section>
 
     <!-- ============== PITAS ============== -->
-    <section class="menu menu-pitas" id="pitas" aria-labelledby="pitas-title">
-      <header class="menu-header">
-        <p class="eyebrow" data-i18n="pitas.eyebrow">Wrapped to go</p>
-        <h2 id="pitas-title" data-i18n="pitas.title">Pitas</h2>
-        <p class="menu-sub" data-i18n="pitas.sub">Cypriot pita, hot off the grill, paper-wrapped for the walk down to the harbour.</p>
+    <section class="menu-section pitas-section" id="pitas" aria-labelledby="pitas-title">
+      <div class="chapter-rail" aria-hidden="true">
+        <span class="chapter-num">III</span>
+        <span class="chapter-label" data-i18n="pitas.eyebrow">Wrapped to go</span>
+      </div>
+
+      <header class="section-header section-header-split">
+        <h2 id="pitas-title" data-i18n="pitas.title">Pitas.</h2>
+        <p class="section-sub" data-i18n="pitas.sub">Cypriot pita, hot off the grill, paper-wrapped for the walk down to the harbour.</p>
+        <svg class="header-orn" aria-hidden="true"><use href="#dash-orn"/></svg>
       </header>
-      <div class="pita-grid">
-        <article class="pita-card" data-reveal>
+
+      <div class="pita-board">
+        <article class="pita-polaroid" data-reveal style="--rot: -3.5deg">
           <div class="pita-photo"><picture><source srcset="assets/images/pita-pulled-chicken.webp" type="image/webp" /><img src="assets/images/pita-pulled-chicken.png" alt="" loading="lazy" /></picture></div>
-          <div class="pita-meta">
-            <h3 data-i18n="pita.pulled.name">Pulled Chicken</h3>
-            <span class="dish-price">€14</span>
-          </div>
+          <div class="pita-tape pita-tape-tl" aria-hidden="true"></div>
+          <div class="pita-meta"><h3 data-i18n="pita.pulled.name">Pulled Chicken</h3><span class="dish-price">€14</span></div>
           <p class="dish-desc" data-i18n="pita.pulled.desc">Slow-pulled chicken, cabbage, tahini, harissa.</p>
         </article>
 
-        <article class="pita-card" data-reveal>
+        <article class="pita-polaroid" data-reveal style="--rot: 2.2deg; --ty: 24px">
           <div class="pita-photo"><picture><source srcset="assets/images/pita-asado.webp" type="image/webp" /><img src="assets/images/pita-asado.png" alt="" loading="lazy" /></picture></div>
-          <div class="pita-meta">
-            <h3 data-i18n="pita.asado.name">Asado</h3>
-            <span class="dish-price">€15</span>
-          </div>
+          <div class="pita-tape pita-tape-tl" aria-hidden="true"></div>
+          <div class="pita-meta"><h3 data-i18n="pita.asado.name">Asado</h3><span class="dish-price">€15</span></div>
           <p class="dish-desc" data-i18n="pita.asado.desc">Slow-cooked beef short rib, chimichurri, pickled cabbage.</p>
         </article>
 
-        <article class="pita-card" data-reveal>
+        <article class="pita-polaroid" data-reveal style="--rot: -1.6deg">
           <div class="pita-photo"><picture><source srcset="assets/images/pita-kebab.webp" type="image/webp" /><img src="assets/images/pita-kebab.png" alt="" loading="lazy" /></picture></div>
-          <div class="pita-meta">
-            <h3 data-i18n="pita.kebab.name">Kebab</h3>
-            <span class="dish-price">€15</span>
-          </div>
+          <div class="pita-tape pita-tape-br" aria-hidden="true"></div>
+          <div class="pita-meta"><h3 data-i18n="pita.kebab.name">Kebab</h3><span class="dish-price">€15</span></div>
           <p class="dish-desc" data-i18n="pita.kebab.desc">Hand-rolled kebabs, grilled vegetables, tahini, sumac.</p>
         </article>
       </div>
 
-      <p class="menu-footnote" data-i18n="pitas.more">Also: Boneless Chicken · Chicken Schnitzel · Jerusalem Mix · Ribeye Entrecôte pitas.</p>
+      <p class="menu-footnote">
+        <svg class="footnote-orn" aria-hidden="true"><use href="#dash-orn"/></svg>
+        <span data-i18n="pitas.more">Also: Boneless Chicken · Chicken Schnitzel · Jerusalem Mix · Ribeye Entrecôte pitas.</span>
+      </p>
+    </section>
+
+    <!-- ============== REVIEWS — social proof from real Limassol customers ============== -->
+    <section class="reviews-section" id="reviews" aria-labelledby="reviews-title">
+      <header class="reviews-header">
+        <p class="eyebrow" data-i18n="reviews.eyebrow">From the Limassol family</p>
+        <h2 id="reviews-title" data-i18n="reviews.title">What people say.</h2>
+        <div class="reviews-stars" aria-label="5 out of 5 stars on Google">
+          <svg aria-hidden="true"><use href="#star"/></svg>
+          <svg aria-hidden="true"><use href="#star"/></svg>
+          <svg aria-hidden="true"><use href="#star"/></svg>
+          <svg aria-hidden="true"><use href="#star"/></svg>
+          <svg aria-hidden="true"><use href="#star"/></svg>
+          <span data-i18n="reviews.aggregate">5.0 on Google · ASADO Old Port Limassol</span>
+        </div>
+      </header>
+
+      <div class="reviews-grid">
+        <figure class="review-card" data-reveal>
+          <div class="review-stars">
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+          </div>
+          <blockquote data-i18n="reviews.q1">"First timer here, and definitely not the last. Our waiter — not sure if he's also the owner — was very kind and helpful, even brought us some treats. We tried the bowls and they were soooo tasty!!"</blockquote>
+          <figcaption><strong>Stephanos T.</strong> · <span data-i18n="reviews.via">Google review</span></figcaption>
+        </figure>
+
+        <figure class="review-card" data-reveal>
+          <div class="review-stars">
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+          </div>
+          <blockquote data-i18n="reviews.q2">"Simple, friendly, nice set-up. The family that runs the business is around and happy to talk, advise on food, or give samples to taste. Nice music, not too loud. Fair prices. Tasty food."</blockquote>
+          <figcaption><strong>Ionut R.</strong> · <span data-i18n="reviews.via">Google review</span></figcaption>
+        </figure>
+
+        <figure class="review-card" data-reveal>
+          <div class="review-stars">
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+            <svg aria-hidden="true"><use href="#star"/></svg>
+          </div>
+          <blockquote data-i18n="reviews.q3">"Was walking by, spotted the sign saying kosher. Greeted with a smile by the owner, who showed us the kosher certificate. We sat in the back patio. Wonderful lunch — pulled beef for me."</blockquote>
+          <figcaption><strong>Esther W.</strong> · <span data-i18n="reviews.via">Google review</span></figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- ============== SIDES & DRINKS ============== -->
-    <section class="menu menu-sides" id="sides" aria-labelledby="sides-title">
+    <section class="menu-section sides-section" id="sides" aria-labelledby="sides-title">
+      <div class="chapter-rail" aria-hidden="true">
+        <span class="chapter-num">IV</span>
+        <span class="chapter-label" data-i18n="sides.eyebrow">On the side</span>
+      </div>
+
       <div class="sides-grid">
-        <div>
-          <header class="menu-header menu-header-tight">
-            <p class="eyebrow" data-i18n="sides.eyebrow">On the side</p>
-            <h2 id="sides-title" data-i18n="sides.title">Sides &amp; Bites</h2>
+        <div class="sides-col">
+          <header class="section-header-tight">
+            <h2 id="sides-title" data-i18n="sides.title">Sides &amp; Bites.</h2>
           </header>
           <ul class="side-list">
-            <li><span data-i18n="sides.eggplant">Roasted eggplant with tahini</span><span class="dish-price">€6</span></li>
-            <li><span data-i18n="sides.burger">Hamburger &amp; fries</span><span class="dish-price">€18</span></li>
-            <li><span data-i18n="sides.loaded">Loaded fries with asado</span><span class="dish-price">€13</span></li>
-            <li><span data-i18n="sides.cigar">Fried asado cigar</span><span class="dish-price">€6</span></li>
-            <li><span data-i18n="sides.popcorn">Chicken popcorn (small / big)</span><span class="dish-price">€9 / €16</span></li>
-            <li><span data-i18n="sides.fries">Homemade French fries (small / big)</span><span class="dish-price">€4 / €7</span></li>
-            <li><span data-i18n="sides.rice">White rice</span><span class="dish-price">€5</span></li>
-            <li><span data-i18n="sides.pita">Extra pita</span><span class="dish-price">€1.50</span></li>
+            <li><span data-i18n="sides.eggplant">Roasted eggplant with tahini</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€6</span></li>
+            <li><span data-i18n="sides.burger">Hamburger &amp; fries</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€18</span></li>
+            <li><span data-i18n="sides.loaded">Loaded fries with asado</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€13</span></li>
+            <li><span data-i18n="sides.cigar">Fried asado cigar</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€6</span></li>
+            <li><span data-i18n="sides.popcorn">Chicken popcorn (small / big)</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€9 / €16</span></li>
+            <li><span data-i18n="sides.fries">Homemade French fries (small / big)</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€4 / €7</span></li>
+            <li><span data-i18n="sides.rice">White rice</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€5</span></li>
+            <li><span data-i18n="sides.pita">Extra pita</span><span class="dot-leader" aria-hidden="true"></span><span class="dish-price">€1.50</span></li>
           </ul>
         </div>
-        <div>
-          <header class="menu-header menu-header-tight">
+        <div class="sides-col sides-col-drinks">
+          <header class="section-header-tight">
             <p class="eyebrow" data-i18n="drinks.eyebrow">To wash it down</p>
-            <h2 data-i18n="drinks.title">Drinks</h2>
+            <h2 data-i18n="drinks.title">Drinks.</h2>
           </header>
           <ul class="drink-list">
             <li data-i18n="drinks.water">Water</li>
@@ -270,27 +469,66 @@
       </div>
     </section>
 
+    <!-- ============== DELIVERY platforms strip ============== -->
+    <section class="delivery-strip" aria-labelledby="delivery-title">
+      <p id="delivery-title" class="delivery-label" data-i18n="delivery.label">Or order in — same kitchen, your couch:</p>
+      <div class="delivery-logos">
+        <a href="https://wolt.com" target="_blank" rel="noopener" aria-label="Order on Wolt">
+          <img src="assets/delivery/wolt.png" alt="Wolt" loading="lazy" />
+        </a>
+        <a href="https://bolt.eu/en/food/" target="_blank" rel="noopener" aria-label="Order on Bolt Food">
+          <img src="assets/delivery/bolt.png" alt="Bolt Food" loading="lazy" />
+        </a>
+        <a href="https://foody.com.cy" target="_blank" rel="noopener" aria-label="Order on Foody">
+          <img src="assets/delivery/foody.png" alt="Foody" loading="lazy" />
+        </a>
+      </div>
+    </section>
+
     <!-- ============== VISIT ============== -->
-    <section class="visit" id="visit" aria-labelledby="visit-title">
+    <section class="visit-section" id="visit" aria-labelledby="visit-title">
+      <div class="chapter-rail chapter-rail-light" aria-hidden="true">
+        <span class="chapter-num">V</span>
+        <span class="chapter-label" data-i18n="visit.eyebrow">Visit us</span>
+      </div>
+
       <div class="visit-grid">
         <div class="visit-info">
-          <p class="eyebrow" data-i18n="visit.eyebrow">Visit us</p>
-          <h2 id="visit-title" data-i18n="visit.title">Find ASADO Express</h2>
-          <address class="visit-address">
-            <strong data-i18n="visit.addressLabel">Address</strong>
-            <span>Alkminis 29, 8041 Paphos, Cyprus</span>
-          </address>
-          <div class="visit-phone">
-            <strong data-i18n="visit.phoneLabel">Phone</strong>
-            <a href="tel:+35797660007">+357 97 660007</a>
+          <h2 id="visit-title" data-i18n="visit.title">Find ASADO Express.</h2>
+
+          <div class="visit-stamp" aria-hidden="false">
+            <div class="stamp-edge"></div>
+            <div class="stamp-content">
+              <p class="stamp-line stamp-line-meta">
+                <span data-i18n="visit.from">From</span>
+                <span class="stamp-rule"></span>
+                <span data-i18n="visit.to">To</span>
+              </p>
+              <p class="stamp-line stamp-from"><span data-i18n="visit.you">You</span></p>
+              <p class="stamp-line stamp-to">ASADO Express<br/>Alkminis 29<br/>8041 Paphos · Cyprus</p>
+              <a class="stamp-tel" href="tel:+35797660007">+357 97 660007</a>
+            </div>
           </div>
+
           <div class="visit-cta-row">
-            <a class="cta cta-primary" href="tel:+35797660007" data-i18n="cta.call">Call</a>
-            <a class="cta cta-whatsapp" href="https://wa.me/35797660007" data-i18n="cta.whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="cta cta-ghost" href="https://maps.google.com/?q=Alkminis+29,+8041+Paphos,+Cyprus" target="_blank" rel="noopener" data-i18n="cta.directions">Directions</a>
+            <a class="cta cta-primary" href="tel:+35797660007"><span data-i18n="cta.call">Call us</span></a>
+            <a class="cta cta-whatsapp" href="https://wa.me/35797660007" target="_blank" rel="noopener"><span data-i18n="cta.whatsapp">WhatsApp</span></a>
+            <a class="cta cta-ghost" href="https://maps.google.com/?q=Alkminis+29,+8041+Paphos,+Cyprus" target="_blank" rel="noopener"><span data-i18n="cta.directions">Directions</span></a>
+          </div>
+
+          <div class="visit-social">
+            <a href="https://www.instagram.com/asado_nice.to.meat_/" target="_blank" rel="noopener" aria-label="ASADO on Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5 1 .5.5.8.9 1 1.5.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 5.4a4.4 4.4 0 1 0 0 8.8 4.4 4.4 0 0 0 0-8.8Zm5.6-.4a1 1 0 1 0-2.1 0 1 1 0 0 0 2.1 0ZM12 9.2a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Z" fill="currentColor"/></svg>
+              <span>@asado_nice.to.meat_</span>
+            </a>
+            <a href="https://www.facebook.com/asadonicetomeat" target="_blank" rel="noopener" aria-label="ASADO on Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.6c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5v1.8h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12Z" fill="currentColor"/></svg>
+              <span>asadonicetomeat</span>
+            </a>
           </div>
         </div>
-        <div class="visit-map">
+
+        <div class="visit-map" aria-label="Map to ASADO Express, Alkminis 29, Paphos">
           <iframe
             title="Map to ASADO Express, Alkminis 29, Paphos"
             src="https://maps.google.com/maps?q=Alkminis%2029%2C%208041%20Paphos%2C%20Cyprus&z=15&output=embed"
@@ -305,22 +543,33 @@
   <!-- ============== FOOTER ============== -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="brand-asado">ASADO</span>
-        <span class="brand-tag">Nice to Meat · <em>express</em></span>
+      <div class="footer-mark">
+        <img class="footer-logo" src="assets/logo-real/asado-logo.png" alt="ASADO Nice to Meat" />
+        <span class="footer-stamp">Paphos · Limassol</span>
       </div>
+
       <div class="footer-meta">
         <span class="footer-kosher" lang="he" dir="rtl">כשר</span>
-        <span data-i18n="footer.kosher">Kosher certified</span>
+        <span data-i18n="footer.kosher">Kosher Mehadrin</span>
       </div>
-      <p class="footer-copy" data-i18n="footer.copy">© ASADO Nice to Meat · Paphos &amp; Limassol</p>
+
+      <p class="footer-copy">
+        <span data-i18n="footer.copy">© ASADO Nice to Meat · Paphos &amp; Limassol</span>
+        <span class="footer-sep" aria-hidden="true"></span>
+        <span data-i18n="footer.tagline">Where taste meets pleasure.</span>
+      </p>
     </div>
   </footer>
+
+  <!-- YouTube lightbox -->
+  <div class="yt-modal" id="yt-modal" hidden>
+    <button class="yt-modal-close" type="button" aria-label="Close video">×</button>
+    <div class="yt-modal-frame" id="yt-modal-frame"></div>
+  </div>
 
   <script src="i18n.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="animations.js" defer></script>
-
 </body>
 </html>
