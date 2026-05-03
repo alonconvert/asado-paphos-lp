@@ -177,15 +177,16 @@
       fig.style.setProperty('--tilt', `${tilt}deg`);
       if (hide) fig.setAttribute('aria-hidden', 'true');
       if (item.video) {
-        const v = document.createElement('video');
-        v.src = item.video;
-        if (item.poster) v.poster = item.poster;
-        v.autoplay = true;
-        v.loop = true;
-        v.muted = true;
-        v.playsInline = true;
-        v.preload = 'metadata';
-        fig.appendChild(v);
+        // Defer video element creation: ship the poster as <img> first; an
+        // IntersectionObserver swaps in <video> when the figure enters viewport.
+        const placeholder = document.createElement('img');
+        placeholder.src = item.poster || '';
+        placeholder.alt = '';
+        placeholder.loading = 'lazy';
+        placeholder.dataset.video = item.video;
+        if (item.poster) placeholder.dataset.poster = item.poster;
+        fig.appendChild(placeholder);
+        fig.dataset.lazyVideo = '1';
       } else {
         const i = document.createElement('img');
         i.src = item.img;
@@ -194,6 +195,42 @@
         fig.appendChild(i);
       }
       return fig;
+    }
+
+    // Promote lazy video placeholders to real <video> elements as they enter the
+    // viewport, and pause+remove them when they leave. Cuts initial DOM cost
+    // dramatically (perf agent: 162 instantiated <video> tags → ~10-20 active).
+    function setupVideoLazyLoad() {
+      if (!('IntersectionObserver' in window)) return;
+      const figs = document.querySelectorAll('.mosaic-col figure[data-lazy-video]');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const fig = entry.target;
+          const placeholder = fig.querySelector('img[data-video]');
+          if (entry.isIntersecting) {
+            if (placeholder && !fig.querySelector('video')) {
+              const v = document.createElement('video');
+              v.src = placeholder.dataset.video;
+              if (placeholder.dataset.poster) v.poster = placeholder.dataset.poster;
+              v.autoplay = true;
+              v.loop = true;
+              v.muted = true;
+              v.playsInline = true;
+              v.preload = 'metadata';
+              v.style.cssText = placeholder.style.cssText;
+              fig.replaceChild(v, placeholder);
+            }
+          } else {
+            const v = fig.querySelector('video');
+            if (v && placeholder) {
+              try { v.pause(); } catch (_) {}
+              const newPlaceholder = placeholder.cloneNode(true);
+              fig.replaceChild(newPlaceholder, v);
+            }
+          }
+        });
+      }, { rootMargin: '300px 0px' });
+      figs.forEach((f) => io.observe(f));
     }
     // Build a wide spread of durations across the columns so each one moves at a
     // visibly different pace. Range 350-1100s — slowest column near-still, fastest
@@ -221,6 +258,8 @@
       const delay = (-Math.random() * parseFloat(dur)).toFixed(1);
       col.style.animationDelay = `${delay}s`;
     });
+    // Activate IntersectionObserver-gated <video> swap-in for the lazy figures
+    setupVideoLazyLoad();
   }
 
   function init() {

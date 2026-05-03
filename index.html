@@ -3,18 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title data-i18n="meta.title">ASADO Express Paphos · Sister to Old Port Limassol</title>
-  <meta name="description" data-i18n="meta.description" content="ASADO Express, the new Paphos branch of ASADO Nice to Meat (Old Port Limassol). Kosher Argentinian-Mediterranean kitchen — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. Alkminis 29, Paphos." />
+  <title data-i18n="meta.title">ASADO Express Paphos · Kosher Argentinian Restaurant in Paphos</title>
+  <meta name="description" data-i18n="meta.description" content="Kosher Argentinian-Mediterranean kitchen on Alkminis 29, Paphos — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. The new Paphos branch of ASADO Nice to Meat (Old Port Limassol). Open now." />
   <meta name="theme-color" content="#073329" />
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="canonical" href="https://asado-paphos-lp.vercel.app/" />
+
+  <!-- Hero LCP — preload the WebP so it lands before paint -->
+  <link rel="preload" as="image" href="assets/images/hero-hummus-asado.webp" type="image/webp" fetchpriority="high" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,30..100,0..1&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;700;900&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Serif+Hebrew:wght@500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=cea2e22-1777809696" />
-  <meta property="og:title" content="ASADO Express · Paphos" />
-  <meta property="og:description" content="The new Paphos branch of ASADO Nice to Meat. Kosher Argentinian-Mediterranean. Asado, kebabs, hummus bowls, pita wraps." />
-  <meta property="og:image" content="assets/images/hero-hummus-asado.png" />
-  <meta property="og:type" content="restaurant.restaurant" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&family=Noto+Serif+Hebrew:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=390a153-1777810388" />
+
+  <!-- Open Graph / link unfurls (absolute URLs so WhatsApp/iMessage render the card) -->
+  <meta property="og:url" content="https://asado-paphos-lp.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ASADO Express Paphos · Kosher Argentinian-Mediterranean" />
+  <meta property="og:description" content="Slow-cooked asado, hand-rolled kebabs, fresh hummus bowls. The new Paphos branch of ASADO Nice to Meat. Alkminis 29 · +357 97 660007." />
+  <meta property="og:image" content="https://asado-paphos-lp.vercel.app/assets/images/hero-hummus-asado.png" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="he_IL" />
+  <meta property="og:locale:alternate" content="ar_AE" />
+  <meta property="og:locale:alternate" content="el_GR" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ASADO Express Paphos · Kosher Argentinian-Mediterranean" />
+  <meta name="twitter:description" content="Slow-cooked asado, hand-rolled kebabs, fresh hummus bowls. Alkminis 29 · Paphos." />
+  <meta name="twitter:image" content="https://asado-paphos-lp.vercel.app/assets/images/hero-hummus-asado.png" />
+
+  <!-- Hreflang for the 7 languages — i18n.js reads ?lang= on load -->
+  <link rel="alternate" hreflang="en" href="https://asado-paphos-lp.vercel.app/?lang=en" />
+  <link rel="alternate" hreflang="he" href="https://asado-paphos-lp.vercel.app/?lang=he" />
+  <link rel="alternate" hreflang="ar" href="https://asado-paphos-lp.vercel.app/?lang=ar" />
+  <link rel="alternate" hreflang="el" href="https://asado-paphos-lp.vercel.app/?lang=el" />
+  <link rel="alternate" hreflang="ru" href="https://asado-paphos-lp.vercel.app/?lang=ru" />
+  <link rel="alternate" hreflang="fr" href="https://asado-paphos-lp.vercel.app/?lang=fr" />
+  <link rel="alternate" hreflang="it" href="https://asado-paphos-lp.vercel.app/?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="https://asado-paphos-lp.vercel.app/" />
+
+  <!-- Restaurant structured data — feeds Google rich results, map pack, knowledge panel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://asado-paphos-lp.vercel.app/#restaurant",
+    "name": "ASADO Express Paphos",
+    "alternateName": "ASADO Nice to Meat · Paphos",
+    "url": "https://asado-paphos-lp.vercel.app/",
+    "image": "https://asado-paphos-lp.vercel.app/assets/images/hero-hummus-asado.png",
+    "description": "Kosher Argentinian-Mediterranean kitchen in Paphos — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps.",
+    "telephone": "+357-97-660007",
+    "priceRange": "€€",
+    "servesCuisine": ["Argentinian", "Mediterranean", "Kosher", "Israeli"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Alkminis 29",
+      "addressLocality": "Paphos",
+      "postalCode": "8041",
+      "addressCountry": "CY"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 34.7720, "longitude": 32.4297 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "11:00", "closes": "15:00" }
+    ],
+    "acceptsReservations": "True",
+    "hasMenu": "https://asado-paphos-lp.vercel.app/#bowls",
+    "sameAs": [
+      "https://www.facebook.com/asadonicetomeat",
+      "https://www.instagram.com/asado_nicetomeat",
+      "https://asadonicetomeat.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -88,20 +155,20 @@
 
       <div class="hero-content">
         <h1 class="hero-title" id="hero-title">
-          <span class="hero-line" data-i18n="hero.line1">Where taste</span>
-          <span class="hero-line"><em data-i18n="hero.line2">meets</em> <span data-i18n="hero.line3">pleasure.</span></span>
+          <span class="hero-line" data-i18n="hero.line1">Argentinian fire.</span>
+          <span class="hero-line"><em data-i18n="hero.line2">Mediterranean</em> <span data-i18n="hero.line3">soul.</span></span>
         </h1>
 
-        <p class="hero-tagline" data-i18n="hero.tagline">Authentic kosher Argentinian cuisine with a Mediterranean touch — slow-cooked asado, hand-rolled kebabs, fresh hummus bowls and pita wraps. Now open in the heart of Paphos.</p>
+        <p class="hero-tagline" data-i18n="hero.tagline">Short rib that's been on the grill since this morning. Hummus pressed before lunch. Pita off the fire, paper-wrapped, five minutes from the harbour. Strictly kosher, family-run.</p>
 
         <div class="hero-ctas">
           <a class="cta cta-primary" href="tel:+35797660007">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4a2 2 0 0 1 2-2h2.5a1 1 0 0 1 .97.76l1.06 4.24a1 1 0 0 1-.27.95l-1.7 1.7a14 14 0 0 0 6.07 6.07l1.7-1.7a1 1 0 0 1 .95-.27l4.24 1.06a1 1 0 0 1 .76.97V18a2 2 0 0 1-2 2h-1C9.61 20 4 14.39 4 7V6a2 2 0 0 1 1-1.7Z" fill="currentColor"/></svg>
-            <span data-i18n="cta.call">Call us</span>
+            <span data-i18n="cta.call">Save us a table</span>
           </a>
           <a class="cta cta-whatsapp" href="https://wa.me/35797660007" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm5.4 14.4c-.2.6-1.3 1.2-1.8 1.3-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .5-.1.2-.2.3-.4.5-.1.2-.3.3-.4.5s-.3.4-.1.7c.2.4.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.6.3.1.5.1.7-.1.2-.2.8-.9.9-1.2.1-.3.3-.2.5-.1.2.1 1.4.7 1.6.8.3.1.4.2.5.3.1.2.1.7-.1 1.4Z" fill="currentColor"/></svg>
-            <span data-i18n="cta.whatsapp">WhatsApp</span>
+            <span data-i18n="cta.whatsapp">Order on WhatsApp</span>
           </a>
           <a class="cta cta-ghost" href="#video">
             <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
@@ -671,10 +738,20 @@
             </div>
           </div>
 
+          <div class="visit-hours" aria-label="Opening hours">
+            <p class="hours-eyebrow" data-i18n="hours.eyebrow">Hours · Paphos</p>
+            <ul class="hours-list">
+              <li><span data-i18n="hours.weekday">Sun – Thu</span><span class="dot-leader" aria-hidden="true"></span><span>11:00 — 22:00</span></li>
+              <li><span data-i18n="hours.friday">Friday</span><span class="dot-leader" aria-hidden="true"></span><span>11:00 — 15:00</span></li>
+              <li><span data-i18n="hours.saturday">Saturday</span><span class="dot-leader" aria-hidden="true"></span><span data-i18n="hours.closed">Closed for Shabbat</span></li>
+            </ul>
+            <p class="hours-note" data-i18n="hours.note">Hours may shift on holidays — give us a call.</p>
+          </div>
+
           <div class="visit-cta-row">
-            <a class="cta cta-primary" href="tel:+35797660007"><span data-i18n="cta.call">Call us</span></a>
-            <a class="cta cta-whatsapp" href="https://wa.me/35797660007" target="_blank" rel="noopener"><span data-i18n="cta.whatsapp">WhatsApp</span></a>
-            <a class="cta cta-ghost" href="https://maps.google.com/?q=Alkminis+29,+8041+Paphos,+Cyprus" target="_blank" rel="noopener"><span data-i18n="cta.directions">Directions</span></a>
+            <a class="cta cta-primary" href="tel:+35797660007"><span data-i18n="cta.call">Save us a table</span></a>
+            <a class="cta cta-whatsapp" href="https://wa.me/35797660007" target="_blank" rel="noopener"><span data-i18n="cta.whatsapp">Order on WhatsApp</span></a>
+            <a class="cta cta-ghost" href="https://maps.google.com/?q=Alkminis+29,+8041+Paphos,+Cyprus" target="_blank" rel="noopener"><span data-i18n="cta.directions">Get directions</span></a>
           </div>
 
           <div class="visit-social">
@@ -700,6 +777,22 @@
     </section>
 
   </main>
+
+  <!-- Sticky mobile bottom action bar — Call · WhatsApp · Directions, always reachable -->
+  <nav class="mobile-action-bar" aria-label="Quick actions">
+    <a href="tel:+35797660007" class="mab-action mab-action-primary" aria-label="Call ASADO Express Paphos">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 4a2 2 0 0 1 2-2h2.5a1 1 0 0 1 .97.76l1.06 4.24a1 1 0 0 1-.27.95l-1.7 1.7a14 14 0 0 0 6.07 6.07l1.7-1.7a1 1 0 0 1 .95-.27l4.24 1.06a1 1 0 0 1 .76.97V18a2 2 0 0 1-2 2h-1C9.61 20 4 14.39 4 7V6a2 2 0 0 1 1-1.7Z" fill="currentColor"/></svg>
+      <span data-i18n="cta.call">Call</span>
+    </a>
+    <a href="https://wa.me/35797660007" target="_blank" rel="noopener" class="mab-action mab-action-whatsapp" aria-label="WhatsApp ASADO Express Paphos">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm5.4 14.4c-.2.6-1.3 1.2-1.8 1.3-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .5-.1.2-.2.3-.4.5-.1.2-.3.3-.4.5s-.3.4-.1.7c.2.4.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.6.3.1.5.1.7-.1.2-.2.8-.9.9-1.2.1-.3.3-.2.5-.1.2.1 1.4.7 1.6.8.3.1.4.2.5.3.1.2.1.7-.1 1.4Z" fill="currentColor"/></svg>
+      <span data-i18n="mab.whatsapp">WhatsApp</span>
+    </a>
+    <a href="https://maps.google.com/?q=Alkminis+29,+8041+Paphos,+Cyprus" target="_blank" rel="noopener" class="mab-action" aria-label="Directions to ASADO Express Paphos">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.5 7.3 11.5 7.6 11.7a1 1 0 0 0 1.3 0C13.2 21.5 20 15.5 20 10a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" fill="currentColor"/></svg>
+      <span data-i18n="mab.map">Map</span>
+    </a>
+  </nav>
 
   <!-- ============== FOOTER ============== -->
   <footer class="site-footer">
@@ -728,9 +821,9 @@
     <div class="yt-modal-frame" id="yt-modal-frame"></div>
   </div>
 
-  <script src="i18n.js?v=cea2e22-1777809696" defer></script>
+  <script src="i18n.js?v=390a153-1777810388" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="animations.js?v=cea2e22-1777809696" defer></script>
+  <script src="animations.js?v=390a153-1777810388" defer></script>
 </body>
 </html>

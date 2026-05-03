@@ -1804,3 +1804,132 @@ html[lang="he"] .dropcap,
 html[lang="ar"] .dropcap { font-family: var(--font-he-display); font-weight: 900; }
 html[lang="he"] .hero-line em,
 html[lang="ar"] .hero-line em { font-style: normal; }
+
+/* ============== POLISH WAVE — focus, hours, sticky mobile bar ============== */
+
+/* Global focus-visible (a11y + frontend agent: zero focus styles existed) */
+:where(a, button, [role="button"], [role="option"], input, select, textarea):focus-visible {
+  outline: 2px solid var(--terracotta-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Hero CTAs sit on photo — use cream outline for contrast */
+.hero-ctas .cta:focus-visible {
+  outline-color: var(--cream);
+  outline-offset: 4px;
+}
+
+/* WhatsApp button: brand-color hover (frontend agent: was hovering identically) */
+.cta-whatsapp { background: #25D366; color: #073329; }
+.cta-whatsapp:hover { background: #1EBD58; color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(30,189,88,0.35); }
+
+/* ============== VISIT HOURS BLOCK ============== */
+.visit-hours {
+  margin: 1.6rem 0 2rem;
+  padding: 1.4rem 1.6rem 1.6rem;
+  background: var(--cream-deep);
+  border-inline-start: 4px solid var(--terracotta);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.hours-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--terracotta-deep);
+  margin: 0 0 0.85rem;
+}
+.hours-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+.hours-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 0.88rem + 0.3vw, 1.12rem);
+  color: var(--ink);
+}
+.hours-list li > span:first-child {
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings: "opsz" 36;
+  flex-shrink: 0;
+}
+.hours-list .dot-leader {
+  flex: 1;
+  border-bottom: 1px dotted rgba(7, 51, 41, 0.28);
+  position: relative;
+  top: -0.3rem;
+}
+.hours-list li > span:last-child {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--asado-teal-deep);
+  font-weight: 500;
+}
+.hours-note {
+  margin: 1rem 0 0;
+  font-size: 0.84rem;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+
+/* ============== STICKY MOBILE ACTION BAR ============== */
+.mobile-action-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 60;
+  display: none;  /* shown at <= 760px below */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  background: rgba(7, 51, 41, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid rgba(245, 239, 227, 0.14);
+  box-shadow: 0 -8px 28px rgba(7, 51, 41, 0.3);
+}
+.mab-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.6rem 0.4rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  transition: background 200ms ease, transform 200ms ease;
+}
+.mab-action:active { transform: scale(0.96); }
+.mab-action:hover { background: rgba(245, 239, 227, 0.08); }
+.mab-action-primary { color: var(--terracotta); }
+.mab-action-whatsapp { color: #6BE89F; }
+
+@media (max-width: 760px) {
+  .mobile-action-bar { display: grid; }
+  /* Lift footer copy slightly so the sticky bar doesn't cover the last line */
+  .site-footer { padding-bottom: calc(2rem + 80px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* ============== HERO SCROLL CUE — animated nudge ============== */
+@keyframes scroll-nudge {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.85; }
+  50%      { transform: translate(-50%, 6px); opacity: 1; }
+}
+.hero-scroll {
+  animation: scroll-nudge 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll { animation: none; }
+}
