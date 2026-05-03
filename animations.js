@@ -201,6 +201,13 @@
       order.forEach((it) => col.appendChild(buildFigure(it, false)));
       // Duplicate copy for seamless wrap (aria-hidden so SR doesn't repeat)
       order.forEach((it) => col.appendChild(buildFigure(it, true)));
+      // Randomize per-column scroll duration: 220-380s (much slower so tiles read).
+      // Overrides any .mosaic-col-speed-* CSS class so each load feels different.
+      const dur = (220 + Math.random() * 160).toFixed(1);
+      col.style.animationDuration = `${dur}s`;
+      // Random small phase offset so columns don't all "start" at the same Y.
+      const delay = (-Math.random() * parseFloat(dur)).toFixed(1);
+      col.style.animationDelay = `${delay}s`;
     });
   }
 
