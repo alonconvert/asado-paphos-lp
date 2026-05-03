@@ -150,9 +150,64 @@
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) close(); });
   }
 
+  // Mosaic gallery — populate each column with the FULL asset list in a different
+  // shuffled order, then duplicate the set for seamless marquee loop. Each tile gets
+  // a small random rotation for the polaroid feel.
+  function setupMosaic() {
+    const tpl = document.getElementById('mosaic-assets');
+    const cols = document.querySelectorAll('.mosaic-col');
+    if (!tpl || !cols.length) return;
+    const items = [...tpl.content.querySelectorAll('i')].map((el) => ({
+      img: el.dataset.img || '',
+      video: el.dataset.video || '',
+      poster: el.dataset.poster || '',
+    }));
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+    function buildFigure(item, hide) {
+      const fig = document.createElement('figure');
+      // Slight per-tile tilt so the column reads as a polaroid stack
+      const tilt = (Math.random() * 5 - 2.5).toFixed(2);
+      fig.style.setProperty('--tilt', `${tilt}deg`);
+      if (hide) fig.setAttribute('aria-hidden', 'true');
+      if (item.video) {
+        const v = document.createElement('video');
+        v.src = item.video;
+        if (item.poster) v.poster = item.poster;
+        v.autoplay = true;
+        v.loop = true;
+        v.muted = true;
+        v.playsInline = true;
+        v.preload = 'metadata';
+        fig.appendChild(v);
+      } else {
+        const i = document.createElement('img');
+        i.src = item.img;
+        i.alt = '';
+        i.loading = 'lazy';
+        fig.appendChild(i);
+      }
+      return fig;
+    }
+    cols.forEach((col) => {
+      const order = shuffle(items);
+      // First copy
+      order.forEach((it) => col.appendChild(buildFigure(it, false)));
+      // Duplicate copy for seamless wrap (aria-hidden so SR doesn't repeat)
+      order.forEach((it) => col.appendChild(buildFigure(it, true)));
+    });
+  }
+
   function init() {
     setupHeader();
     setupYouTube();
+    setupMosaic();
     if (reduced) {
       fallbackReveal();
       return;
