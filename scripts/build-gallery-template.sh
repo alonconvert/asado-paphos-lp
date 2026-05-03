@@ -11,10 +11,12 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 # Paths that hold gallery-eligible images. Order matters only for diff stability.
+# Skipping assets/video-frames: 51 of its 57 source videos overlap with
+# assets/gallery-frames/, which is the newer, complete extraction.
 IMAGE_DIRS=(
   "assets/lifestyle"
-  "assets/video-frames"
   "assets/gallery-frames"
+  "assets/maps-photos"
   "assets/images/real"
   "assets/video"   # paphos-* stills, kitchen posters etc.
 )

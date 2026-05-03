@@ -195,17 +195,29 @@
       }
       return fig;
     }
-    cols.forEach((col) => {
+    // Build a wide spread of durations across the columns so each one moves at a
+    // visibly different pace. Range 350-1100s — slowest column near-still, fastest
+    // gentle. Linear-spaced then shuffled so adjacent columns have different speeds.
+    const colCount = cols.length;
+    const minDur = 350;
+    const maxDur = 1100;
+    const durations = Array.from({ length: colCount }, (_, i) => {
+      const t = colCount === 1 ? 0.5 : i / (colCount - 1);
+      // Add a small per-column jitter so it doesn't look perfectly stepped.
+      const jitter = (Math.random() - 0.5) * 80;
+      return minDur + (maxDur - minDur) * t + jitter;
+    });
+    const shuffledDurations = shuffle(durations);
+
+    cols.forEach((col, idx) => {
       const order = shuffle(items);
       // First copy
       order.forEach((it) => col.appendChild(buildFigure(it, false)));
       // Duplicate copy for seamless wrap (aria-hidden so SR doesn't repeat)
       order.forEach((it) => col.appendChild(buildFigure(it, true)));
-      // Randomize per-column scroll duration: 220-380s (much slower so tiles read).
-      // Overrides any .mosaic-col-speed-* CSS class so each load feels different.
-      const dur = (220 + Math.random() * 160).toFixed(1);
+      const dur = shuffledDurations[idx].toFixed(1);
       col.style.animationDuration = `${dur}s`;
-      // Random small phase offset so columns don't all "start" at the same Y.
+      // Random negative animation-delay so columns don't all "start" at the same Y.
       const delay = (-Math.random() * parseFloat(dur)).toFixed(1);
       col.style.animationDelay = `${delay}s`;
     });
