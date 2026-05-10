@@ -1,0 +1,47 @@
+# ==========================================================================
+# .htaccess for asadoexpresspaphos.online (HostGator / Apache)
+# Replaces what vercel.json was doing when this site was on Vercel.
+# Apache equivalents of: cleanUrls, security headers, asset caching, gzip.
+# ==========================================================================
+
+# --- Security headers (X-Content-Type-Options, Referrer-Policy, HSTS) ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+</IfModule>
+
+# --- Cache headers ---
+<IfModule mod_headers.c>
+  # Long-lived immutable cache for static assets (1 year)
+  <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|mp4|webm|woff|woff2|ttf|otf|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Short revalidate cache for code (60s) so updates propagate quickly
+  <FilesMatch "\.(css|js|json)$">
+    Header set Cache-Control "public, max-age=60, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# --- Clean URLs (vercel.json "cleanUrls": true equivalent) ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # /file.html  →  /file  (301 redirect, preserves SEO/bookmarks)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html[\ ?] [NC]
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+  # /file  →  internally serves /file.html (no redirect)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# --- Gzip compression (faster page loads, less bandwidth) ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Default index ---
+DirectoryIndex index.html
